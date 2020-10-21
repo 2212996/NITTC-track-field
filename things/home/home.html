@@ -54,8 +54,7 @@
       <div class="topPic"><!--TOP画面--> 
         <div class="ricgun"><!--陸軍画像-->
           <div id="intro"><!--TOP画面文字-->
-            <a1>NITTC</a1><br>
-            <a>Track & Field</a>
+            
           </div><!--intro-->
           <img src="rikugun.png" class="ricgunPic">  
         </div><!--ricgun-->
@@ -112,10 +111,16 @@
             <div class="comp_contents1">
               
               <div class="comp_neumo">
-                高校総体西三河予選
+                <div class="comp_block">
+                  <div class="comp_name">高校総体西三河予選</div>
+                  <div class="comp_rem">3 months left...</div>
+                </div>
                 <div class="daychart">
+                  
                   <span>
+                    
                     <div id="p2"></div>
+                    
                   </span>
                   <script>
                     var d1 = new Date('2021/05/22 01:09:55');
@@ -130,7 +135,10 @@
                 </div>
               </div>
               <div class="comp_neumo">
-                東海高専大会
+                <div class="comp_block">
+                  <div class="comp_name">東海地区高専大会</div>
+                  <div class="comp_rem">3 months left...</div>
+                </div>
                 <div class="daychart">
                   <span>
                     <div id="p3"></div>
@@ -148,7 +156,10 @@
                 </div>
               </div>
               <div class="comp_neumo">
-                西日本高専駅伝大会
+                <div class="comp_block">
+                  <div class="comp_name">西日本高専駅伝大会</div>
+                  <div class="comp_rem">3 months left...</div>
+                </div>
                 <div class="daychart">
                   <span>
                     <div id="p5"></div>
@@ -165,6 +176,9 @@
                   </script>
                 </div>
               </div>
+              <div class="comp_caution">
+                ※グラフが空の場合は残り1年、満タンで残り0日です
+              </div>
               
             </div> 
           </div>
@@ -172,51 +186,33 @@
         </div>
         <div class="comp_space2"></div>
         
-        <div class="space"></div>
-        
         <div class="news">
           <div class="news_title">更新情報</div>
           <div class="news_subtitle">NEWS</div>
-          <div class="news_contents"></div>
+          <div class="news_contents"><!--tableだとフォントサイズが狂うため、divで作成-->
+            <div class="tr">
+              <div class="td date">2019/08/18<a2>MEDIA</a2></div>
+              <div class="td table">東海高専大会の結果を更新</div>
+            </div>
+            <div class="tr">
+              <div class="td date">2019/07/08<a1>RESULT</a1></div>
+              <div class="td table">愛知県選手権の結果を更新</div>
+            </div>
+            <div class="tr">
+              <div class="td date">2019/07/01<a1>RESULT</a1></div>
+              <div class="td table">たくさん更新しました！</div>
+            </div>
+            <div class="tr">
+              <div class="td date">2019/06/29<a2>MEDIA</a2></div>
+              <div class="td table">スマホ版HPを更新しました</div>
+            </div>
+            <div class="tr tr_bottom">
+              <div class="td date">2019/06/23<a2>MEDIA</a2></div>
+              <div class="td table">全国高専大会の結果・動画を更新</div>
+            </div>
+          </div>
         </div>
        
-        
-        <div class="newss fade_off">
-          <div class="Titles"><a1>N</a1>ews</div>
-          <div class="Bars"></div>
-          <div class="newsChart">
-            <table>
-              <tr>
-                <td class="date">2019.08.18<a2>メディア</a2></td>
-                <td>全国高専大会の結果・動画を更新</td>
-              </tr>
-              <tr>
-                <td class="date">2019.07.08<a1>大会結果</a1></td>
-                <td>東海高専大会の結果を更新</td>
-              </tr>
-              <tr>
-                <td class="date">2019.07.01<a1>大会結果</a1></td>
-                <td>東海高校総体・愛知県選手権の結果を更新</td>
-              </tr>
-              <tr>
-                <td class="date">2019.06.29<a2>メディア</a2></td>
-                <td>スマホ版HPを作成しました！(仮)</td>
-              </tr>
-              <tr>
-                <td class="date">2019.06.23<a2>メディア</a2></td>
-                <td>たくさん更新しました！</td>
-              </tr>
-            </table>
-          </div> 
-        </div>
-        
-        <div class="content_base fade_off">
-          <div class="newsContainer">
-            <a href="#" class="btn-box-black"><a1>MORE</a1></a>
-          </div>
-          <div class="Title"><a2>C</a2>ontents</div>
-          <div class="Bar"></div>
-        </div>
         <div class="content_pic1 fade_off">
           <div class="bg1"></div>
           <p1>member list</p1>
@@ -244,8 +240,8 @@
         </div>
         
         <div class="twitter fade_off">
-          <div class="Title"><a3>T</a3>witter</div>
-          <div class="Bar"></div>
+          <div class="twitter_title">公式ツイッター</div>
+          <div class="twitter_subtitle">TWITTER</div>
           <div class="twitterBody">
             <a class="twitter-timeline" data-lang="ja" data-width="800" data-height="1200" href="https://twitter.com/tnct_tfc?ref_src=twsrc%5Etfw" data-chrome=”noscrollbar”>Tweets by tnct_tfc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
@@ -253,6 +249,7 @@
         </div>
 
         <script type="text/javascript" src="home.js"></script>
+        
         
       </div>
       <footer>
