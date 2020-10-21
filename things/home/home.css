@@ -401,7 +401,7 @@ top: 2.4vw;
 
 .comp_space{
   width:95%;
-  height:108vw;
+  height:110vw;
   background: #e0e5ec;
   
   position:relative;
@@ -412,7 +412,7 @@ top: 2.4vw;
 
 .comp_space2{
   width:95%;
-  height:108vw;
+  height:110vw;
   background: #2e4600;
   
   position:relative;
@@ -488,28 +488,28 @@ top: 2.4vw;
   box-shadow: inset 0.5vw 0.5vw 1vw #a3b1c6, inset -0.5vw -0.5vw 1vw #FFFFFF;
   
   margin-top: 1.5vw;
-  margin-bottom: 2.5vw;
+  margin-bottom: 2.75vw;
   margin-left: 1vw;
 }
 
 #p2{
-  background: rgb(0,48,4);
-background: linear-gradient(90deg, rgba(0,48,4,1) 0%, rgba(16,139,11,1) 40%, rgba(13,255,0,0) 100%);
+  background: rgb(29,52,13);
+background: linear-gradient(90deg, rgba(29,52,13,1) 0%, rgba(92,130,26,1) 40%, rgba(198,209,102,0) 100%);
   height:5vw;
   border-radius: 2.5vw;
   
 }
 
 #p3{
-  background: rgb(0,48,4);
-background: linear-gradient(90deg, rgba(0,48,4,1) 0%, rgba(16,139,11,1) 40%, rgba(13,255,0,0) 100%);
+  background: rgb(29,52,13);
+background: linear-gradient(90deg, rgba(29,52,13,1) 0%, rgba(92,130,26,1) 40%, rgba(198,209,102,0) 100%);
   height:5vw;
   border-radius: 2.5vw;
 }
 
 #p5{
-  background: rgb(0,48,4);
-background: linear-gradient(90deg, rgba(0,48,4,1) 0%, rgba(16,139,11,1) 40%, rgba(13,255,0,0) 100%);
+  background: rgb(29,52,13);
+background: linear-gradient(90deg, rgba(29,52,13,1) 0%, rgba(92,130,26,1) 40%, rgba(198,209,102,0) 100%);
   height:5vw;
   border-radius: 2.5vw;
 }
@@ -550,23 +550,55 @@ background: linear-gradient(90deg, rgba(0,48,4,1) 0%, rgba(16,139,11,1) 40%, rgb
   text-align: center;
   font-family: 'Abel', sans-serif;
   font-size: 1.5rem;
-  color:#80bd9e;
+  color:#db9501;
 }
 
 .news_contents{
-  width:80%;
+  width:90%;
   margin: auto;
   padding-top: 7vw;
   padding-bottom: 11vw;
-  color:#444;
-  font-family: "Noto Serif JP", serif;
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 8rem;
-  letter-spacing: 0.15rem;
 }
-
-
+.tr{
+  
+  color:#555;
+  border-top: #ccc 2px solid;
+  padding-top: 4vw;
+  padding-bottom:4vw;
+}
+.td{
+  margin-left: 3vw;
+}
+.date{
+  font-family: 'Abel', sans-serif;
+  font-size: 1.3rem;
+  color:#999;
+  padding-top:0.5vw;
+  padding-bottom:0.5vw;
+}
+.date a1{
+  background-color: #75b1a9;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-left: 6vw;
+  color:#eee;
+}
+.date a2{
+  background-color: #db9501;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin-left: 6vw;
+  color: #eee;
+}
+.table{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.3rem;
+  padding-top:0.5vw;
+  padding-bottom:0.5vw;
+}
+.tr_bottom{
+  border-bottom: #ccc 2px solid;
+}
 
 
 
@@ -626,56 +658,6 @@ background: linear-gradient(90deg, rgba(0,48,4,1) 0%, rgba(16,139,11,1) 40%, rgb
 
 
 
-
-
-
-
-
-
-
-.newsChart{
-  margin-top: 5vw;
-  width:85%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "M PLUS Rounded 1c";
-  font-size:2.4vw;
-  color:#444;
-}
-.newsChart table{
-  width:100%;
-}
-.newsChart tr{
-  display: block;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
-}
-.newsChart td{
-  display: block;
-  margin-top: 0.5vw;
-  margin-bottom: 0.5vw;
-}
-.newsContainer {
-  text-align: center;
-  padding-top: 12vw;
-  padding-bottom: 6vw;
-}
-.newsChart a1{
-  margin-left: 2vw;
-  background: #E20000;
-  color:whitesmoke;
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
-  font-weight:bold;
-}
-.newsChart a2{
-  margin-left: 2vw;
-  background: #140E45;
-  color:whitesmoke;
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
-  font-weight: bold;
-}
 
 
 
@@ -885,11 +867,30 @@ background: linear-gradient(90deg, rgba(0,48,4,1) 0%, rgba(16,139,11,1) 40%, rgb
 .twitter{
   background: #F9F8FF;
 }
+
+
+
+.twitter_title{
+  color:#444;
+  text-align: center;
+  padding-top: 10vw;
+  font-family: "Noto Serif JP", serif;
+  font-size: 6rem;
+  
+}
+
+.twitter_subtitle{
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5rem;
+  color:#31a9b8;
+}
+
 .twitterBody{
-  padding-top: 2rem;
+  padding-top: 8vw;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 3rem;
+  padding-bottom: 8vw;
   text-align: center;
   width:100%;
 }
