@@ -3,64 +3,47 @@
 <html>
 
   <head>
+    
     <meta charset="UTF-8">
     <title>豊田高専陸上競技部</title>
+    
+    <!--  ライブラリ  -->
     <link href="home.css" rel="stylesheet">
-    <link href="jquery-yycountdown-master/css/jquery.yycountdown.css" ref="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"><!--googleフォント（intro）-->
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
     <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="home.js"></script>
-    <script type="text/javascript" src="jquery-yycountdown-master/js/jquery.yycountdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
     <script type="text/javascript" src="jquery.bgswitche.js"></script>
+    
+    <!--  google font  -->
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-    
     <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
   </head>
-  
-  <!--
-    xx_title    =color:444
-                 padding-top: 10vw;
-                 font-family: "Noto Serif JP", serif;
-                 font-size: 4.5rem;
-    xx_subtitle =font-family: 'Abel', sans-serif;
-                 font-size: 1.5rem;
-                 color:#ff420e;
-    xx_contents =width:80%;
-                 margin: auto;
-                 padding-top: 7vw;
-                 padding-bottom: 11vw;
-                 color:#444;
-                 font-family: "Noto Serif JP", serif;
-                 font-size: 1.15rem;
-                 font-weight: 500;
-                 line-height: 6rem;
-  --> 
   
   <body>
     
     <div class="wrapper"><!--body親要素-->
       
       <div class="topPic"><!--TOP画面--> 
+        <div class="topFig">
+          TOYOTA<br>
+          <a>KOSEN</a> <br>
+          <div class="topFigTF">TRACK&FIELD</div>
+        </div>
         <div class="ricgun"><!--陸軍画像-->
-          <div id="intro"><!--TOP画面文字-->
-            
-          </div><!--intro-->
           <img src="rikugun.png" class="ricgunPic">  
-        </div><!--ricgun-->
-      </div><!--topPic--> 
+        </div>
+        <div class="topSentence">
+          We are "the Army"
+        </div>
+      </div>
       
-      <div class="cp_fullscreenmenu">
+      <div class="cp_fullscreenmenu"><!--ハンバーガーボックス-->
         <input class="toggle" type="checkbox" />
         <div class="hamburger"><span></span></div>
         <div class="menu">
@@ -78,9 +61,9 @@
         </div>
       </div>
         
-      <div class="contents">
+      <div class="contents"><!--以下コンテンツ要素-->
         
-        <div class="toyotakosen">
+        <div class="toyotakosen fade_off"><!--合間のとよたこうせん-->
           <table>
             <tr>
               <td class="jp">とよたこうせん</td>
@@ -91,9 +74,9 @@
           </table>
         </div>
         
-        <div class="void_pic1"></div>
+        <div class="void_pic1 fade_off"></div><!--グラウンドの画像の所-->
         
-        <div class="aboutus">
+        <div class="aboutus fade_off"><!--ようこそ-->
           <div class="aboutus_title">ようこそ</div>
           <div class="aboutus_subtitle">WELCOME</div>
           <div class="aboutus_contents">
@@ -109,7 +92,6 @@
           <div class="comp_space">
             <div class="comp_title">Timelimit<a>大会まであと何日？</a></div>
             <div class="comp_contents1">
-              
               <div class="comp_neumo">
                 <div class="comp_block">
                   <div class="comp_name">高校総体西三河予選</div>
@@ -186,7 +168,7 @@
         </div>
         <div class="comp_space2"></div>
         
-        <div class="news">
+        <div class="news fade_off">
           <div class="news_title">更新情報</div>
           <div class="news_subtitle">NEWS</div>
           <div class="news_contents"><!--tableだとフォントサイズが狂うため、divで作成-->
@@ -211,31 +193,34 @@
               <div class="td table">全国高専大会の結果・動画を更新</div>
             </div>
           </div>
+          <div class="news_button">
+            <a href="" class="btn btn-malformation">MORE</a>
+          </div>
         </div>
        
         <div class="content_pic1 fade_off">
           <div class="bg1"></div>
-          <p1>member list</p1>
+          <p1>MEMBER LIST</p1>
           <p2>部員名簿</p2>
         </div>
         <div class="content_pic2 fade_off">
           <div class="bg2"></div>
-          <p1>game results</p1>
+          <p1>GAME RESULTS</p1>
           <p2>大会結果</p2>
         </div> 
         <div class="content_pic3 fade_off">
           <div class="bg3"></div>
-          <p1>successive records</p1>
+          <p1>RECORDS</p1>
           <p2>歴代記録</p2>
         </div>
         <div class="content_pic4 fade_off">
           <div class="bg4"></div>
-          <p1>blog</p1>
+          <p1>BLOG</p1>
           <p2>ブログ</p2>
         </div>
         <div class="content_pic5 fade_off">
           <div class="bg5"></div>
-          <p1>gallery</p1>
+          <p1>GALLERY</p1>
           <p2>ギャラリー</p2>
         </div>
         

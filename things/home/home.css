@@ -7,13 +7,12 @@ body{
   margin:0;
   padding:0;
   font-size: 2.5em;
-  
-  background: #000;
 }
 * {
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
+/*ハンバーガーメニューのa要素*/
 a,
 a:visited,
 a:hover,
@@ -23,7 +22,7 @@ color: inherit;
 }
 .cp_fullscreenmenu {
 position: fixed;
-z-index: 10000;
+z-index: 1000;
 top: 3vw;
 right:3vw;
 }
@@ -213,17 +212,20 @@ top: 2.4vw;
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
+  z-index: 100;
 }
 .ricgun{
   width:100%;
   height:100vh;
-  background: radial-gradient(rgba(52,103,92,0.35),rgba(0,0,0,0.5) 30%, rgba(76,181,245,0.35), rgba(0,0,0,0.6) 70%, rgba(170,193,0,0.35));
+  background: radial-gradient(rgba(52,103,92,0.15),rgba(0,0,0,0.3) 30%, rgba(76,181,245,0.15), rgba(0,0,0,0.4) 70%, rgba(170,193,0,0.15));
   background-size: 800% 800%;
   animation: gradation 60s ease infinite;
   background-position:center center;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  z-index: 101;
 }
 @keyframes gradation {
 0% {background-position:100% 33%; }
@@ -240,33 +242,55 @@ top: 2.4vw;
 }
 .ricgunPic{
   position: absolute;
-  z-index: 1;
-  width:40vh;
+  z-index: 101;
+  width:45vh;
   top:25%;
   height:auto;
 }
-#intro{
+.topFig{
   position: absolute;
-  bottom:20%;
+  z-index: 102;
+  
+  top:3vw;
+  left:4vw;
+  
   color:#fff;
-  text-align: center;
-  width:100%; 
-  line-height: 6rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Abel', sans-serif;
+  font-size: 9rem;
+  line-height: 6.4vw;
+  font-weight: bold;
+  
 }
-#intro a1{
-  font-size: 15rem;
-  font-family: 'Oswald', sans-serif;
-  border-bottom: 1px solid #000;
+.topFig a{
+  letter-spacing: 0.55vw;
 }
-#intro a{
-  font-size: 6rem;
+.topFigTF{
+  font-size: 4.86rem;
+  margin-top: -1.3vw;
 }
+.topSentence{
+  position:absolute;
+  z-index: 101;
+  
+  bottom:40vw;
+  font-size: 5rem;
+  font-family: 'Abel', sans-serif;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 
 .contents{
   background: #b7b8b6;
 }
-
 .toyotakosen{
   width:100%;
   height:100vw;
@@ -274,14 +298,12 @@ top: 2.4vw;
   text-align: center;
   writing-mode:vertical-rl;
 }
-
 .toyotakosen table{
   width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .jp{
   font-family: "Kokoro";
   font-size: 5rem;
@@ -289,7 +311,6 @@ top: 2.4vw;
   font-weight: bold;
   color:#184121;
 }
-
 .en{
   font-family: 'Fjalla One', sans-serif;
   font-size:4rem;
@@ -297,7 +318,6 @@ top: 2.4vw;
   letter-spacing: 1.4rem;
   color:#00ad94;
 }
-
 .void_pic1{
   width:100%;
   background: url(ground.JPG);
@@ -308,37 +328,10 @@ top: 2.4vw;
   left: 0;
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .aboutus{
   width:100%;
   background-color: #f4f5f7;
 }
-
 .aboutus_title{
   color:#444;
   text-align: center;
@@ -346,14 +339,12 @@ top: 2.4vw;
   font-family: "Noto Serif JP", serif;
   font-size: 6rem;
 }
-
 .aboutus_subtitle{
   text-align: center;
   font-family: 'Abel', sans-serif;
   font-size: 1.5rem;
   color:#80bd9e;
 }
-
 .aboutus_contents{
   width:85%;
   margin: auto;
@@ -366,20 +357,6 @@ top: 2.4vw;
   line-height: 8rem;
   letter-spacing: 0.1rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .void_pic2{
   width:100%;
   background: url(news_space.jpg);
@@ -392,13 +369,11 @@ top: 2.4vw;
   
   z-index: 10;
 }
-
 .competition{
   width:100%;
   height:140vw;
   background: #f4f5f7;
 }
-
 .comp_space{
   width:95%;
   height:110vw;
@@ -409,7 +384,6 @@ top: 2.4vw;
   
   bottom:10vw;
 }
-
 .comp_space2{
   width:95%;
   height:110vw;
@@ -421,7 +395,6 @@ top: 2.4vw;
   left:5%;
   bottom:80vw;
 }
-
 .comp_title{
   color:#111;
   text-align: left;
@@ -433,15 +406,13 @@ top: 2.4vw;
   
   padding-left: 6rem;
 }
-
 .comp_title a{
   padding-left: 5vw;
   
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 3.5rem;
-  color:#555;
+  color:#2e4600;
 }
-
 .comp_neumo{
   width:85%;
   margin-left: 6vw;
@@ -469,14 +440,12 @@ top: 2.4vw;
   display:contents;
   float: left;
 }
-
 .comp_rem{
   font-size: 3.25rem;
   float: right;
   font-family: 'Abel', sans-serif;
   margin-top: 0.5vw;
 }
-
 .daychart span{
   display:inline-block;
   width:90%;
@@ -491,7 +460,6 @@ top: 2.4vw;
   margin-bottom: 2.75vw;
   margin-left: 1vw;
 }
-
 #p2{
   background: rgb(0,108,132);
 background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%, rgba(226,232,228,0) 100%);
@@ -499,21 +467,18 @@ background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%
   border-radius: 2.5vw;
   
 }
-
 #p3{
   background: rgb(0,108,132);
 background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%, rgba(226,232,228,0) 100%);
   height:5vw;
   border-radius: 2.5vw;
 }
-
 #p5{
   background: rgb(0,108,132);
 background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%, rgba(226,232,228,0) 100%);
   height:5vw;
   border-radius: 2.5vw;
 }
-
 .comp_caution{
   margin-left: 7vw;
   color:#666;
@@ -601,6 +566,62 @@ background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%
 }
 
 
+.news_button{
+  width:100%;
+  text-align: center;
+  padding-bottom: 10vw;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-malformation {
+  font-size: 3rem;
+
+  padding: 4rem 7rem;
+
+  color: #fff;
+  border-radius: 100% 12vw / 12vw 100%;
+  background-color: #db9501;
+}
+
+a.btn-malformation:hover {
+  color: #fff;
+  border-radius: 60% 80% / 100% 80%;
+}
 
 
 
@@ -613,48 +634,32 @@ background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*フェードするやつ*/
 .fade_off {
-  opacity: 0.2;
+  opacity: 0.25;
   transition: all ease 1s;
 }
 .fade_on {
   opacity: 1;
 }
-.newss{
-  /*background: #F9F8FF;*/
-   background: linear-gradient(180deg, #f9f8ff, #ffffff);
-}
-.Titles{
-  text-align: center;
-  width: 100%;
-  padding-top: 5vw;
-  color:#444;
-  font-weight: bold;
-  font-size: 7vw;
-  font-family: 'Oswald', sans-serif;
-}
-.Bars{
-  color: black;
-  display: flex;
-  align-items: center;
-  width:10vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 3vw;
-  padding-bottom: 2vw;
-}
-.Bars:before,
-.Bars:after {
-  border-top: 0.3vw solid;
-  content: "";
-  flex-grow: 1;
-}
-.Bars:before {
-  margin-right: 0rem;
-}
-.Bars:after {
-  margin-left: 0rem;
-}
 
 
 
@@ -669,70 +674,6 @@ background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%
 
 
 
-
-
-.btn-box-black {
-  display: inline-block;
-  width: 35%;
-  text-align: center;
-  font-size: 3.5vw;
-  color: #de7a22;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 1vw 0vw;
-  position: relative;
-  border: 0.5vw solid #de7a22;
-  transition: .4s;
-}
-.btn-box-black:hover {
-  border: 0.5vw solid transparent;
-  color: #000;
-}
-.btn-box-black:before, .btn-box-black:after {
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  transform: scale(0);
-  transition: .2s;
-}
-.btn-box-black:before {
-  color:#de7a22;
-  border-bottom: 2px solid #000;
-  border-left: 2px solid #000;
-  transform-origin: 100% 0%;
-}
-.btn-box-black:after {
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
-  transform-origin: 0% 100%;
-}
-.btn-box-black:hover:after,
-.btn-box-black:hover:before {
-  transform: scale(1);
-}
-.btn-box-black a1{
-  color:#de7a22;
-}
-
-.date{
-  font-weight: bold;
-}
-.comp{
-  background: #F3F3F3;
-}
-.content_base{
-  background: #F9F8FF;
-  padding-bottom: 10vw;
-  
-  background: url(content_base.png);
-  background-position: bottom;
-  background-size: cover;
-}
 .content_pic1,.content_pic2,.content_pic3,.content_pic4,.content_pic5{
   width: 100%;
   height: 40vw;
@@ -749,13 +690,11 @@ background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
   margin: auto;
-  top: 0;
+  top: 0vw;
   bottom: 0;
   
-  font-family: 'Bebas Neue', cursive;
-  font-size: 9vw;
-  
-  letter-spacing: 0.4vw;
+  font-family: 'Abel', sans-serif;
+  font-size: 8rem;
 }
 .content_pic1 p2,.content_pic2 p2,.content_pic3 p2,.content_pic4 p2,.content_pic5 p2{
   width: 85%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
@@ -773,7 +712,8 @@ background: linear-gradient(90deg, rgba(0,108,132,1) 0%, rgba(110,181,192,1) 40%
   
   border-top: solid 0.4vw;
   font-size: 3vw;
-  font-family: "M PLUS Rounded 1c";
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 300;
 }
 .bg1{
   /*位置の設定*/
