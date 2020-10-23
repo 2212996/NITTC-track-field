@@ -7,7 +7,7 @@ $(function() {
     $('.wrapper').css('width', nowWidth);
   });
   
-  $('.topPic').bgSwitcher({
+  $(".topPic").bgSwitcher({
     images: ["back0.jpg","back2.JPG","back3.jpg"], 
     interval:6000,
     loop:true,
@@ -15,7 +15,33 @@ $(function() {
   });
   
   $(window).scroll(function (){
-    $(".welcome").each(function(){
+    $(".toyotakosen").each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).addClass("fade_on");
+      } else {
+        $(this).removeClass("fade_on");
+      }
+    });
+  });
+  
+  $(window).scroll(function (){
+    $(".void_pic1").each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).addClass("fade_on");
+      } else {
+        $(this).removeClass("fade_on");
+      }
+    });
+  });
+  
+  $(window).scroll(function (){
+    $(".aboutus").each(function(){
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
