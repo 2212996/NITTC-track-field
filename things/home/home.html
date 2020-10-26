@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-
-変数命名規則：スネーク記法（例・・・top_picture_set）
-
--->
+<!--変数命名規則：スネーク記法（例・・・top_picture_set）-->
 
 <html>
 
@@ -34,24 +30,24 @@
     
     <div class="wrapper"><!--body親要素-->
       
-      <div class="topPic"><!--TOP画面--> 
-        <div class="topFig">
+      <div class="top_pic"><!--TOP画面--> 
+        <div class="top_fig">
           TOYOTA<br>
           <a>KOSEN</a> <br>
-          <div class="topFigTF">TRACK&FIELD</div>
+          <div class="top_fig_sub">TRACK&FIELD</div>
         </div>
-        <div class="ricgun"><!--陸軍画像-->
-          <img src="rikugun.png" class="ricgunPic">  
+        <div class="top_ricgun_area"><!--陸軍画像-->
+          <img src="rikugun.png" class="top_ricgun_pic">  
         </div>
-        <div class="topSentence">
+        <div class="top_sentence">
           We are "the Army"
         </div>
       </div>
       
-      <div class="cp_fullscreenmenu"><!--ハンバーガーボックス-->
-        <input class="toggle" type="checkbox" />
-        <div class="hamburger"><span></span></div>
-        <div class="menu">
+      <div class="sidemenu"><!--ハンバーガーボックス-->
+        <input class="sidemenu_toggle" type="checkbox" />
+        <div class="sidemenu_hamb"><span></span></div>
+        <div class="sidemenu_list">
           <div>
             <ul>
               <li><a href="#">Top</a></li>
@@ -68,13 +64,13 @@
         
       <div class="contents"><!--以下コンテンツ要素-->
         
-        <div class="toyotakosen fade_off"><!--合間のとよたこうせん-->
+        <div class="kosen fade_off"><!--合間のとよたこうせん-->
           <table>
             <tr>
-              <td class="jp">とよたこうせん</td>
+              <td class="kosen_jp">とよたこうせん</td>
             </tr>
             <tr>
-              <td class="en">TOYOTA  KOSEN</td>
+              <td class="kosen_en">TOYOTA  KOSEN</td>
             </tr>
           </table>
         </div>
@@ -92,174 +88,168 @@
           </div>
         </div>
         
-        <div class="competition">
-          <div class="void_pic2"></div>
-          <div class="comp_space">
-            <div class="comp_title">Timelimit<a>大会まであと何日？</a></div>
-            <div class="comp_contents1">
-              <div class="comp_neumo">
-                <div class="comp_block">
-                  <div class="comp_name">高校総体西三河予選</div>
-                  <div class="comp_rem">
-                    <script type="text/javascript" src="dateCalc1.js">
+        <div class="comp_group fade_off">
+          <div class="competition">
+            <div class="void_pic2"></div>
+            <div class="comp_space">
+              <div class="comp_title">Timelimit<a>大会まであと何日？</a></div>
+              <div class="comp_contents1">
+                <div class="comp_neumo">
+                  <div class="comp_block">
+                    <div class="comp_name">高校総体西三河予選</div>
+                    <div class="comp_rem">
+                      <script type="text/javascript" src="dateCalc1.js">
+                      </script>
+                    </div>
+                  </div>
+                  <div class="daychart">
+                    <span>
+                      <div id="daychart1"></div>
+                    </span>
+                    <script>
+                      var d1 = new Date('2021/05/22 00:00:00');
+                      var d2 = new Date();
+
+                      var diffTime = d1.getTime() - d2.getTime();
+                      var diffSecond = Math.floor(diffTime / (1000));
+                      var p2_value = Math.floor(100-((diffSecond / (31536000)) * 100));
+
+                      document.getElementById('daychart1').style.width = p2_value + '%';
                     </script>
                   </div>
                 </div>
-                <div class="daychart">
-                  
-                  <span>
-                    
-                    <div id="p2"></div>
-                    
-                  </span>
-                  <script>
-                    var d1 = new Date('2021/05/22 00:00:00');
-                    var d2 = new Date();
+                <div class="comp_neumo">
+                  <div class="comp_block">
+                    <div class="comp_name">東海地区高専大会</div>
+                    <div class="comp_rem">
+                      <script type="text/javascript" src="dateCalc2.js">
+                      </script>
+                    </div>
+                  </div>
+                  <div class="daychart">
+                    <span>
+                      <div id="daychart2"></div>
+                    </span>
+                    <script>
+                      var d1 = new Date('2021/07/22 00:00:00');
+                      var d2 = new Date();
 
-                    var diffTime = d1.getTime() - d2.getTime();
-                    var diffSecond = Math.floor(diffTime / (1000));
-                    var p2_value = Math.floor(100-((diffSecond / (31536000)) * 100));
+                      var diffTime = d1.getTime() - d2.getTime();
+                      var diffSecond = Math.floor(diffTime / (1000));
+                      var p2_value = Math.floor(100-((diffSecond / (31536000)) * 100));
 
-                    document.getElementById('p2').style.width = p2_value + '%';
-                    
-                    var aaa=document.getElementsByClassName(".aaa1")
-                    var text=document.createTextNode(name);
-                    aaa.appendChild(text);
-                    
-                  </script>
-                </div>
-              </div>
-              <div class="comp_neumo">
-                <div class="comp_block">
-                  <div class="comp_name">東海地区高専大会</div>
-                  <div class="comp_rem">
-                    <script type="text/javascript" src="dateCalc2.js">
+                      document.getElementById('daychart2').style.width = p2_value + '%';
                     </script>
                   </div>
                 </div>
-                <div class="daychart">
-                  <span>
-                    <div id="p3"></div>
-                  </span>
-                  <script>
-                    var d1 = new Date('2021/07/22 00:00:00');
-                    var d2 = new Date();
+                <div class="comp_neumo">
+                  <div class="comp_block">
+                    <div class="comp_name">西日本高専駅伝大会</div>
+                    <div class="comp_rem">
+                      <script type="text/javascript" src="dateCalc3.js">
+                      </script>
+                    </div>
+                  </div>
+                  <div class="daychart">
+                    <span>
+                      <div id="daychart3"></div>
+                    </span>
+                    <script>
+                      var d1 = new Date('2020/12/22 00:00:00');
+                      var d2 = new Date();
 
-                    var diffTime = d1.getTime() - d2.getTime();
-                    var diffSecond = Math.floor(diffTime / (1000));
-                    var p2_value = Math.floor(100-((diffSecond / (31536000)) * 100));
+                      var diffTime = d1.getTime() - d2.getTime();
+                      var diffSecond = Math.floor(diffTime / (1000));
+                      var p2_value = Math.floor(100-((diffSecond / (31536000)) * 100));
 
-                    document.getElementById('p3').style.width = p2_value + '%';
-                  </script>
-                </div>
-              </div>
-              <div class="comp_neumo">
-                <div class="comp_block">
-                  <div class="comp_name">西日本高専駅伝大会</div>
-                  <div class="comp_rem">
-                    <script type="text/javascript" src="dateCalc3.js">
+                      document.getElementById('daychart3').style.width = p2_value + '%';
                     </script>
                   </div>
                 </div>
-                <div class="daychart">
-                  <span>
-                    <div id="p5"></div>
-                  </span>
-                  <script>
-                    var d1 = new Date('2020/12/22 00:00:00');
-                    var d2 = new Date();
-
-                    var diffTime = d1.getTime() - d2.getTime();
-                    var diffSecond = Math.floor(diffTime / (1000));
-                    var p2_value = Math.floor(100-((diffSecond / (31536000)) * 100));
-
-                    document.getElementById('p5').style.width = p2_value + '%';
-                  </script>
+                <div class="comp_caution">
+                  ※グラフが空の場合は残り1年、満タンで残り0日です
                 </div>
-              </div>
-              <div class="comp_caution">
-                ※グラフが空の場合は残り1年、満タンで残り0日です
-              </div>
-              
-            </div> 
+              </div> 
+            </div>
           </div>
-          
+          <div class="comp_space2"></div>
         </div>
-        <div class="comp_space2"></div>
         
         <div class="news fade_off">
           <div class="news_title">更新情報</div>
           <div class="news_subtitle">NEWS</div>
           <div class="news_contents"><!--tableだとフォントサイズが狂うため、divで作成-->
-            <div class="tr">
-              <div class="td date">2019/08/18<a2>MEDIA</a2></div>
-              <div class="td table">東海高専大会の結果を更新</div>
+            <div class="news_tr">
+              <div class="news_td news_date">2019/08/18<a2>MEDIA</a2></div>
+              <div class="news_td news_table">東海高専大会の結果を更新</div>
             </div>
-            <div class="tr">
-              <div class="td date">2019/07/08<a1>RESULT</a1></div>
-              <div class="td table">愛知県選手権の結果を更新</div>
+            <div class="news_tr">
+              <div class="news_td news_date">2019/07/08<a1>RESULT</a1></div>
+              <div class="news_td news_table">愛知県選手権の結果を更新</div>
             </div>
-            <div class="tr">
-              <div class="td date">2019/07/01<a1>RESULT</a1></div>
-              <div class="td table">たくさん更新しました！</div>
+            <div class="news_tr">
+              <div class="news_td news_date">2019/07/01<a1>RESULT</a1></div>
+              <div class="news_td news_table">たくさん更新しました！</div>
             </div>
-            <div class="tr">
-              <div class="td date">2019/06/29<a2>MEDIA</a2></div>
-              <div class="td table">スマホ版HPを更新しました</div>
+            <div class="news_tr">
+              <div class="news_td news_date">2019/06/29<a2>MEDIA</a2></div>
+              <div class="news_td news_table">スマホ版HPを更新しました</div>
             </div>
-            <div class="tr tr_bottom">
-              <div class="td date">2019/06/23<a2>MEDIA</a2></div>
-              <div class="td table">全国高専大会の結果・動画を更新</div>
+            <div class="news_tr news_tr_bottom">
+              <div class="news_td news_date">2019/06/23<a2>MEDIA</a2></div>
+              <div class="news_td news_table">全国高専大会の結果・動画を更新</div>
             </div>
           </div>
           <div class="news_button">
-            <a href="" class="btn btn-malformation">MORE</a>
+            <a href="" class="news_btn news_btn_malformation">MORE</a>
           </div>
         </div>
        
-        <div class="content_pic1 fade_off">
-          <div class="bg1"></div>
-          <p1>MEMBER LIST</p1>
-          <p2>部員名簿</p2>
-        </div>
-        <div class="content_pic2 fade_off">
-          <div class="bg2"></div>
-          <p1>GAME RESULTS</p1>
-          <p2>大会結果</p2>
-        </div> 
-        <div class="content_pic3 fade_off">
-          <div class="bg3"></div>
-          <p1>RECORDS</p1>
-          <p2>歴代記録</p2>
-        </div>
-        <div class="content_pic4 fade_off">
-          <div class="bg4"></div>
-          <p1>BLOG</p1>
-          <p2>ブログ</p2>
-        </div>
-        <div class="content_pic5 fade_off">
-          <div class="bg5"></div>
-          <p1>GALLERY</p1>
-          <p2>ギャラリー</p2>
+        <div class="content_list">
+          <div class="content_pic1 fade_off">
+            <div class="content_bg1"></div>
+            <p1>MEMBER LIST</p1>
+            <p2>部員名簿</p2>
+          </div>
+          <div class="content_pic2 fade_off">
+            <div class="content_bg2"></div>
+            <p1>GAME RESULTS</p1>
+            <p2>大会結果</p2>
+          </div> 
+          <div class="content_pic3 fade_off">
+            <div class="content_bg3"></div>
+            <p1>RECORDS</p1>
+            <p2>歴代記録</p2>
+          </div>
+          <div class="content_pic4 fade_off">
+            <div class="content_bg4"></div>
+            <p1>BLOG</p1>
+            <p2>ブログ</p2>
+          </div>
+          <div class="content_pic5 fade_off">
+            <div class="content_bg5"></div>
+            <p1>GALLERY</p1>
+            <p2>ギャラリー</p2>
+          </div>
         </div>
         
         <div class="twitter fade_off">
           <div class="twitter_title">公式ツイッター</div>
           <div class="twitter_subtitle">TWITTER</div>
-          <div class="twitterBody">
+          <div class="twitter_body">
+            <!--以下のクラス名は埋め込み要素の為、例外としてハイフンによるスネイク記法-->
             <a class="twitter-timeline" data-lang="ja" data-width="800" data-height="1200" href="https://twitter.com/tnct_tfc?ref_src=twsrc%5Etfw" data-chrome=”noscrollbar”>Tweets by tnct_tfc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
-          
         </div>
 
         <script type="text/javascript" src="home.js"></script>
         
-        
       </div>
+      
       <footer>
-        <div class="footerSurface">
-          <div class="footerTitle">N I T T C<a>Track & Field Club</a></div>
-          <div class="footerContent">
+        <div class="footer_surface">
+          <div class="footer_title">N I T T C<a>Track & Field Club</a></div>
+          <div class="footer_content">
             <table>
               <tr>
                 <td>Belongs</td>
@@ -287,15 +277,15 @@
               </tr>
             </table>
           </div>
-          <div class="footerBtn">
+          <div class="footer_btn">
             PAGE TOP
           </div>
         </div>
-        <div class="footerBottom">©2019 National Institute of Technology, Toyota College, Track & Field Club</div>
+        <div class="footer_bottom">©2019 National Institute of Technology, Toyota College, Track & Field Club</div>
       </footer>
+      
     </div><!--wrapper-->
       
   </body>
   
 </html>
-

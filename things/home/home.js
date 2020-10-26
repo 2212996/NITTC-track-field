@@ -2,12 +2,12 @@ $(function() {
   
   $(window).on('load resize', function(){
     var mainheight = $(window).height();
-    $('.topPic').css('height', mainheight);
+    $('.top_pic').css('height', mainheight);
     var nowWidth = $(window).width();
     $('.wrapper').css('width', nowWidth);
   });
   
-  $(".topPic").bgSwitcher({
+  $(".top_pic").bgSwitcher({
     images: ["back0.jpg","back2.JPG","back3.jpg"], 
     interval:6000,
     loop:true,
@@ -15,7 +15,20 @@ $(function() {
   });
   
   $(window).scroll(function (){
-    $(".toyotakosen").each(function(){
+    $(".kosen").each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).addClass("fade_on");
+      } else {
+        $(this).removeClass("fade_on");
+      }
+    });
+  });
+  
+    $(window).scroll(function (){
+    $(".comp_group").each(function(){
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -158,24 +171,3 @@ $(function() {
   });
   
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
