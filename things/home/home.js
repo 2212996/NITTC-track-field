@@ -8,7 +8,7 @@ $(function() {
   });
   
   $(".top_pic").bgSwitcher({
-    images: ["back0.jpg","back2.JPG","back3.jpg"], 
+    images: ["back1.jpg","back2.JPG","back3.jpg"], 
     interval:6000,
     loop:true,
     duration:1500,
@@ -19,7 +19,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -32,7 +32,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -45,7 +45,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -58,7 +58,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -71,7 +71,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -84,7 +84,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -97,7 +97,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -110,7 +110,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -123,7 +123,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -136,7 +136,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -149,7 +149,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
@@ -162,7 +162,7 @@ $(function() {
       var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight/5){
+      if (scroll > imgPos - windowHeight + windowHeight / 5){
         $(this).addClass("fade_on");
       } else {
         $(this).removeClass("fade_on");
