@@ -12,11 +12,24 @@ body{
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
+.sidemenu_title{
+  position: absolute;
+  top:40vw;
+  font-family: "Kokoro";
+  font-size: 6rem;
+}
+.sidemenu_twitter{
+  position:absolute;
+  bottom:32.5vw;
+}
+.icn_twi{
+  width:12.5vw;
+}
 /*ハンバーガーメニューのa要素*/
-a,
-a:visited,
-a:hover,
-a:active {
+.sidemenu a,
+.sidemenu a:visited,
+.sidemenu a:hover,
+.sidemenu a:active {
 text-decoration: none;
 color: inherit;
 }
@@ -68,18 +81,35 @@ padding: 0 1vw;
 list-style: none;
 transition: opacity 0.4s ease;
 opacity: 0;
+  width: 45%;
 }
 .sidemenu .sidemenu_list > div > ul > li {
-font-size: 5vw;
+font-size: 6rem;
 display: block;
-margin: 4vw;
-padding: 0;
+margin-top: 2vw;
+  padding-bottom: 2vw;
+    width: 100%;
+  border-bottom: solid 2px #eee;
+  text-align: left;
+  font-family: 'Abel', sans-serif;
+  border-left: solid 1vw #eee;
+}
+.sidemenu a1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 3rem;
+  padding-left: 7vw;
 }
 .sidemenu .sidemenu_list > div > ul > li > a {
-position: relative;
 display: inline;
 cursor: pointer;
 transition: color 0.4s ease;
+  margin-left: 3vw;
+  padding-right: 45vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  height:100%;
+  z-index: 100;
 }
 .sidemenu .sidemenu_list > div > ul > li > a:hover {
 color: #e5e5e5;
@@ -133,6 +163,9 @@ transform: scale(1);
 .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul {
 opacity: 1;
 }
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > .sidemenu_title {
+transition-delay: 0.1s;
+}
 .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(1) {
 transition-delay: 0.2s;
 }
@@ -153,6 +186,9 @@ transition-delay: 0.7s;
 }
 .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(7) {
 transition-delay: 0.8s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > .sidemenu_twitter {
+transition-delay: 0.9s;
 }
 .sidemenu .sidemenu_toggle:hover + .sidemenu_hamb {
 box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
@@ -308,7 +344,7 @@ top: 2.4vw;
 }
 .void_pic1{
   width:100%;
-  background: url(ground.JPG);
+  background: url(../assets/ground.JPG);
   background-position: center;
   background-size: cover;
   height: 55vw;
@@ -347,7 +383,7 @@ top: 2.4vw;
 }
 .void_pic2{
   width:100%;
-  background: url(news_space.jpg);
+  background: url(../assets/news_space.jpg);
   background-position: center;
   background-size: cover;
   height: 60vw;
@@ -592,14 +628,14 @@ a.news_btn_malformation:hover {
 .fade_on {
   opacity: 1;
 }
-.content_pic1,.content_pic2,.content_pic3,.content_pic4,.content_pic5{
+.content_pic1,.content_pic2,.content_pic3,.content_pic4,.content_pic5,.content_pic6{
   width: 100%;
   height: 40vw;
   background: #000;
 
   position: relative; /*相対位置*/
 }
-.content_pic1 p1,.content_pic2 p1,.content_pic3 p1,.content_pic4 p1,.content_pic5 p1{
+.content_pic1 p1,.content_pic2 p1,.content_pic3 p1,.content_pic4 p1,.content_pic5 p1,.content_pic6 p1{
   width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 15vw;
   color: #fff;
@@ -614,7 +650,7 @@ a.news_btn_malformation:hover {
   font-family: 'Abel', sans-serif;
   font-size: 8rem;
 }
-.content_pic1 p2,.content_pic2 p2,.content_pic3 p2,.content_pic4 p2,.content_pic5 p2{
+.content_pic1 p2,.content_pic2 p2,.content_pic3 p2,.content_pic4 p2,.content_pic5 p2,.content_pic6 p2{
   width: 85%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 5vw;
   color: #fff;
@@ -643,12 +679,12 @@ a.news_btn_malformation:hover {
   text-align: center;
 
   /*背景画像の設定*/
-  background: url(Member.png);
+  background: url(../assets/Member.png);
   background-position: center;
   background-size: cover;
 
   /*透過の設定*/
-  opacity: 0.4;
+  opacity: 0.75;
 
 }
 .content_bg2{
@@ -661,12 +697,12 @@ a.news_btn_malformation:hover {
   text-align: center;
 
   /*背景画像の設定*/
-  background: url(Results.png);
+  background: url(../assets/Results.png);
   background-position: center;
   background-size: cover;
 
   /*透過の設定*/
-  opacity: 0.4;
+  opacity: 0.75;
 }
 .content_bg3{
   /*位置の設定*/
@@ -678,12 +714,12 @@ a.news_btn_malformation:hover {
   text-align: center;
 
   /*背景画像の設定*/
-  background: url(Records.png);
+  background: url(../assets/Records.png);
   background-position: center;
   background-size: cover;
 
   /*透過の設定*/
-  opacity: 0.4;
+  opacity: 0.75;
 }
 .content_bg4{
   /*位置の設定*/
@@ -695,12 +731,12 @@ a.news_btn_malformation:hover {
   text-align: center;
 
   /*背景画像の設定*/
-  background: url(Blogs.png);
+  background: url(../assets/Blogs.png);
   background-position: center;
   background-size: cover;
 
   /*透過の設定*/
-  opacity: 0.4;
+  opacity: 0.75;
 }
 .content_bg5{
   /*位置の設定*/
@@ -712,15 +748,40 @@ a.news_btn_malformation:hover {
   text-align: center;
 
   /*背景画像の設定*/
-  background: url(Gallery.png);
+  background: url(../assets/Gallery.png);
   background-position: center;
   background-size: cover;
 
   /*透過の設定*/
-  opacity: 0.4;
+  opacity: 0.75;
 }
-.content_bg5:hover,.content_bg4:hover,.content_bg3:hover,.content_bg2:hover,.content_bg1:hover{
+.content_bg6{
+  /*位置の設定*/
+  width: 100%;
+  height: 40vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+
+  /*背景画像の設定*/
+  background: url(../assets/diary.jpg);
+  background-position: center;
+  background-size: cover;
+
+  /*透過の設定*/
+  opacity: 0.75;
+}
+.content_bg5:hover,.content_bg4:hover,.content_bg3:hover,.content_bg2:hover,.content_bg1:hover,.content_bg6:hover{
   opacity: 0.7;
+}
+.content_pic1 a,.content_pic2 a,.content_pic3 a,.content_pic4 a,.content_pic5 a,.content_pic6 a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  z-index: 100;
 }
 .twitter{
   background: #F9F8FF;
@@ -792,6 +853,15 @@ footer{
   width:60%;
   font-family: "M PLUS Rounded 1c";
   border-radius: 2vw;
+  position: relative;
+}
+.footer_btn a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  z-index: 1000;
 }
 .footer_bottom{
   background:#000000;

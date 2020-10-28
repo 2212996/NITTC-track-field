@@ -7,16 +7,359 @@ body{
   padding:0;
   font-size: 2.5em;
 }
+* {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+.sidemenu_title{
+  position: absolute;
+  top:40vw;
+  font-family: "Kokoro";
+  font-size: 6rem;
+}
+.sidemenu_twitter{
+  position:absolute;
+  bottom:32.5vw;
+}
+.icn_twi{
+  width:12.5vw;
+}
+/*ハンバーガーメニューのa要素*/
+.sidemenu a,
+.sidemenu a:visited,
+.sidemenu a:hover,
+.sidemenu a:active {
+text-decoration: none;
+color: inherit;
+}
+.sidemenu {
+position: fixed;
+z-index: 1000;
+top: 3vw;
+right:3vw;
+}
+.sidemenu .sidemenu_list {
+position: fixed;
+top: 0;
+right: 0;
+display: flex;
+visibility: hidden;
+overflow: hidden;
+width: 100%;
+height: 100%;
+pointer-events: none;
+outline: 1px solid transparent;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+align-items: center;
+justify-content: center;
+}
+.sidemenu .sidemenu_list > div {
+display: flex;
+overflow: hidden;
+width: 200vw;
+height: 200vw;
+transition: all 0.4s ease;
+-webkit-transform: scale(0);
+transform: scale(0);
+text-align: center;
+color: #fefefe;
+border-radius: 50%;
+background: rgba(0,0,0 ,0.8);
+flex: none;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+align-items: center;
+justify-content: center;
+}
+.sidemenu .sidemenu_list > div > ul {
+display: block;
+max-height: 100vw;
+margin: 0;
+padding: 0 1vw;
+list-style: none;
+transition: opacity 0.4s ease;
+opacity: 0;
+  width: 45%;
+}
+.sidemenu .sidemenu_list > div > ul > li {
+font-size: 6rem;
+display: block;
+margin-top: 2vw;
+  padding-bottom: 2vw;
+    width: 100%;
+  border-bottom: solid 2px #eee;
+  text-align: left;
+  font-family: 'Abel', sans-serif;
+  border-left: solid 1vw #eee;
+}
+.sidemenu a1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 3rem;
+  padding-left: 7vw;
+}
+.sidemenu .sidemenu_list > div > ul > li > a {
+display: inline;
+cursor: pointer;
+transition: color 0.4s ease;
+  margin-left: 3vw;
+  padding-right: 45vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  height:100%;
+  z-index: 100;
+}
+.sidemenu .sidemenu_list > div > ul > li > a:hover {
+color: #e5e5e5;
+}
+.sidemenu .sidemenu_list > div > ul > li > a:hover:after {
+width: 100%;
+}
+.sidemenu .sidemenu_list > div > ul > li > a:after {
+position: absolute;
+z-index: 1;
+bottom: -0.15em;
+right: 0;
+width: 0;
+height: 2px;
+content: '';
+transition: width 0.4s ease;
+background: #e5e5e5;
+}
+.sidemenu .sidemenu_toggle {
+position: absolute;
+z-index: 2;
+top: 0;
+right: 0;
+width: 60px;
+height: 60px;
+cursor: pointer;
+opacity: 0;
+}
+.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span {
+-webkit-transform: rotate(135deg);
+transform: rotate(135deg);
+}
+.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:before,
+.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:after {
+top: 0;
+-webkit-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:after {
+opacity: 0;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list {
+visibility: visible;
+pointer-events: auto;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div {
+transition-duration: 0.75s;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul {
+opacity: 1;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > .sidemenu_title {
+transition-delay: 0.1s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(1) {
+transition-delay: 0.2s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(2) {
+transition-delay: 0.3s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(3) {
+transition-delay: 0.4s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(4) {
+transition-delay: 0.5s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(5) {
+transition-delay: 0.6s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(6) {
+transition-delay: 0.7s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(7) {
+transition-delay: 0.8s;
+}
+.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > .sidemenu_twitter {
+transition-delay: 0.9s;
+}
+.sidemenu .sidemenu_toggle:hover + .sidemenu_hamb {
+box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidemenu .sidemenu_toggle:checked:hover + .sidemenu_hamb > span {
+-webkit-transform: rotate(225deg);
+transform: rotate(225deg);
+}
+.sidemenu .sidemenu_hamb {
+position: absolute;
+z-index: 1;
+top: 0;
+right: 0;
+display: block;
+width: 15vw;
+height: 15vw;
+padding: 0.5em 1em;
+cursor: pointer;
+transition: box-shadow 0.4s ease;
+border-radius: 7.5vw 7.5vw 7.5vw 7.5vw;/*円の描画*/
+background: rgba(0,0,0 ,0.7);
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+.sidemenu .sidemenu_hamb > span {
+position: relative;
+top: 50%;
+margin:auto;/*線の中心揃え*/
+display: block;
+width: 65%;
+height: 0.5vw;
+transition: all 0.4s ease;
+background: #fefefe;
+}
+.sidemenu .sidemenu_hamb > span:before,
+.sidemenu .sidemenu_hamb > span:after {
+position: absolute;
+z-index: 1;
+top: -2.4vw;
+right: 0;
+display: block;
+width: 100%;
+height: 0.5vw;
+content: '';
+transition: all 0.4s ease;
+background: inherit;
+}
+.sidemenu .sidemenu_hamb > span:after {
+top: 2.4vw;
+}
+.title{
+  height:40vh;
+}
 .top{
   width:100%;
-  background: url(Member.png);
+  background: url(../assets/Member.png);
   background-position: center;
   background-size: cover;
-  height: 60vw;
+  height: 40vh;
   top: 0;
   left: 0;
   text-align: center;
   opacity: 0.75;
+}
+.top_fig{
+  position: absolute;
+  z-index: 102;
+  
+  top:3vw;
+  left:4vw;
+  
+  color:#fff;
+  font-family: 'Abel', sans-serif;
+  font-size: 9rem;
+  line-height: 6.4vw;
+  font-weight: bold;
+}
+.top_fig a{
+  letter-spacing: 0.55vw;
+}
+.top_fig_sub{
+  font-size: 4.86rem;
+  margin-top: -1.3vw;
+}
+.top_sentence{
+  position:absolute;
+  color:#fff;
+  top:26.5vh;
+  text-align: center;
+  width: 100%;
+  font-size: 9rem;
+  
+  font-family: 'Fjalla One', sans-serif;
+}
+.top_sentence_jp{
+  position:absolute;
+  color:#fff;
+  top:32.5vh;
+  text-align: center;
+  width: 100%;
+  font-size: 4rem;
+  
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(52,103,92,1) 50%, rgba(255,255,255,0) 100%);
+}
+
+footer{
+  background: #111111;
+}
+.footer_surface{
+  width:85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10vw;
+  color:#f3f3f3;
+}
+.footer_title{
+  font-family: 'Acme', sans-serif;
+  font-size: 8vw;
+  border-bottom: 0.5vw solid #CCCCCC;
+}
+.footer_title a{
+  font-family: "M PLUS Rounded 1c";
+  font-size: 3vw;
+  margin-left: 6vw;
+}
+.footer_content{
+  padding-top: 10vw;
+  padding-bottom: 8vw;
+  font-family: "M PLUS Rounded 1c";
+  font-size: 4vw;
+  
+  line-height: 6vw;
+  letter-spacing: 0.15vw;
+}
+.footer_content td{
+  padding-right: 5vw;
+}
+.footer_btn{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 0vw;
+  margin-bottom: 8vw;
+  padding-top: 1vw;
+  padding-bottom:1vw;
+  font-size: 4.5vw;
+  color:#000;
+  background: #f3f3f3;
+  width:60%;
+  font-family: "M PLUS Rounded 1c";
+  border-radius: 2vw;
+  position: relative;
+}
+.footer_btn a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.footer_bottom{
+  background:#000000;
+  color:#ffffff;
+  font-family: "M PLUS Rounded 1c";
+  font-size: 2.5rem;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  text-align: center;
 }
 
 /*
@@ -25,5 +368,8 @@ https://www.akitem.co.jp/business/
 https://ecola.co.jp/business/conversion/
 https://hiratsuka-k.jp/estate
 https://b-a-k.jp/product/
+
+https://www.keihanhotels-resorts.co.jp/the-thousand-kyoto/okutrip/
+https://editions-life.jp/products/
 
 */

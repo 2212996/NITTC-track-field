@@ -10,10 +10,10 @@
     
     <!--  ライブラリ  -->
     <link href="home.css" rel="stylesheet">
-    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="home.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
-    <script type="text/javascript" src="jquery.bgswitche.js"></script>
+    <script src="../assets/Chart.js"></script>
+    <script type="text/javascript" src="../assets/jquery.bgswitche.js"></script>
     
     <!--  google font  -->
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
           <div class="top_fig_sub">TRACK&FIELD</div>
         </div>
         <div class="top_ricgun_area"><!--陸軍画像-->
-          <img src="rikugun.png" class="top_ricgun_pic">  
+          <img src="../assets/rikugun.png" class="top_ricgun_pic">  
         </div>
         <div class="top_sentence">
           We are "the Army"
@@ -49,15 +49,21 @@
         <div class="sidemenu_hamb"><span></span></div>
         <div class="sidemenu_list">
           <div>
+            <div class="sidemenu_title">とよたこうせん</div>
             <ul>
-              <li><a href="#">Top</a></li>
-              <li><a href="#">Member</a></li>
-              <li><a href="#">Results</a></li>
-              <li><a href="#">Records</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Diary</a></li>
+              <li><a href="../home/home.html">TOP<a1>トップページ</a1></a></li>
+              <li><a href="../member/member.html">Member<a1>部員名簿</a1></a></li>
+              <li><a href="../results/results.html">Results<a1>大会結果</a1></a></li>
+              <li><a href="../records/records.html">Records<a1>歴代記録</a1></a></li>
+              <li><a href="../blog/blog.html">Blog<a1>部員ブログ</a1></a></li>
+              <li><a href="../gallery/gallery.html">Gallery<a1>ギャラリー</a1></a></li>
+              <li><a href="../diary/diary.html">Diary<a1>OB・AC日記</a1></a></li>
             </ul>
+            <div class="sidemenu_twitter">
+              <a href="https://twitter.com/tnct_tfc">
+                <img src="../assets/twitter_logo.jpg" class="icn_twi">
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -201,35 +207,46 @@
             </div>
           </div>
           <div class="news_button">
-            <a href="" class="news_btn news_btn_malformation">MORE</a>
+            <a href="../news/news.html" class="news_btn news_btn_malformation">MORE</a>
           </div>
         </div>
        
         <div class="content_list">
           <div class="content_pic1 fade_off">
+            <a href="../member/member.html"></a>
             <div class="content_bg1"></div>
             <p1>MEMBER LIST</p1>
             <p2>部員名簿</p2>
           </div>
           <div class="content_pic2 fade_off">
+            <a href="../results/results.html"></a>
             <div class="content_bg2"></div>
             <p1>GAME RESULTS</p1>
             <p2>大会結果</p2>
           </div> 
           <div class="content_pic3 fade_off">
+            <a href="../records/records.html"></a>
             <div class="content_bg3"></div>
             <p1>RECORDS</p1>
             <p2>歴代記録</p2>
           </div>
           <div class="content_pic4 fade_off">
+            <a href="../blog/blog.html"></a>
             <div class="content_bg4"></div>
             <p1>BLOG</p1>
-            <p2>ブログ</p2>
+            <p2>部員ブログ</p2>
           </div>
           <div class="content_pic5 fade_off">
+            <a href="../gallery/gallery.html"></a>
             <div class="content_bg5"></div>
             <p1>GALLERY</p1>
             <p2>ギャラリー</p2>
+          </div>
+          <div class="content_pic6 fade_off">
+            <a href="../diary/diary.html"></a>
+            <div class="content_bg6"></div>
+            <p1>DIARY</p1>
+            <p2>OB・AC日記</p2>
           </div>
         </div>
         
@@ -278,10 +295,11 @@
             </table>
           </div>
           <div class="footer_btn">
+            <a href="#"></a>
             PAGE TOP
           </div>
         </div>
-        <div class="footer_bottom">©2019 National Institute of Technology, Toyota College, Track & Field Club</div>
+        <div class="footer_bottom">©2020 National Institute of Technology, Toyota College, Track & Field Club</div>
       </footer>
       
     </div><!--wrapper-->
