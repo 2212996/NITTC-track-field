@@ -321,6 +321,176 @@ body{
   width:100%;
   background-color: #fffcf2;
 }
+.records_title{
+  background-color: #fffcf2;
+}
+.records_title_main{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8vw;
+  width:65%;
+  text-align: center;
+  font-size: 8rem;
+  font-family: 'Fjalla One', sans-serif;
+  color:#252422;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+}
+.records_title_sub{
+  width:100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+  color:#252422;
+}
+.esc{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding-top: 5vw;
+  padding-bottom:5vw;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.esc_gender{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.esc_gender_man{
+  float: left;
+  color:#fff;
+  background-color: #355070;
+  border:1vw solid #355070;
+  border-radius: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.esc_gender_woman{
+  float: right;
+  border:1vw solid #e56b6f;
+  border-radius: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.esc_major{
+  display: flex;
+  justify-content: space-between;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color:#eee;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 5vw;
+}
+.esc_major_short, .esc_major_long, .esc_major_jump, .esc_major_throw{
+  background-color: #bc6c25;
+  width:15vw;
+  border:1vw solid #bc6c25;
+  border-radius: 1vw;
+}
+.records{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw;
+}
+.rank{
+  width:12.5%;
+}
+.name{
+  width:37.5%
+}
+.time{
+  width:50%;
+}
+.chart{
+  padding-bottom: 5vw;
+}
+.chart_title{
+  color:#000;
+  text-align: center;
+  margin-top: 3vw;
+  margin-bottom:3vw;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-size: 5rem;
+  font-weight: bold;
+}
+.chart_table{
+  width:100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-radius: 1.25vw;
+}
+.chart_table table{
+  border-collapse:collapse;
+  table-layout: fixed;
+  width: 180%;
+  font-family: "游ゴシック", "Yu Gothic";
+}
+.chart_table thead{
+  background-color: #403d39;
+  color:#eee;
+  font-size: 3.5rem;
+}
+.chart_table th{
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.chart_table td{
+  text-align: center;
+  font-size: 3.25rem;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border-bottom: 1px solid #222;
+  font-weight: bold;
+}
+.chart_table td a{
+  font-size: 2.5rem;
+  padding-left: 1.5vw;
+}
+.rank{
+  width:15%;
+}
+.name{
+  width:37.5%;
+}
+.score{
+  width:47.5%;
+}
+.party{
+  width:45%;
+}
+.date{
+  width:35%;
+}
+.chart_table::-webkit-scrollbar{
+  width: 10vw;
+}
+.chart_table::-webkit-scrollbar-track{
+  background: #fffcf2;
+  border: none;
+  border-radius: 10px;
+}
+.chart_table::-webkit-scrollbar-thumb{
+  background: #ccc5b9;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+
+
+
 footer{
   background: #111111;
 }

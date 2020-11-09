@@ -319,7 +319,44 @@ body{
 }
 .contents{
   width:100%;
-  background-color: #fffcf2;
+  background-color: #f4f5f7;
+}
+.diary{
+  width:100%;
+  background-color: #f4f5f7;
+  padding-bottom: 7vw;
+}
+.diary_title{
+  color:#444;
+  text-align: center;
+  padding-top: 10vw;
+  font-family: "Noto Serif JP", serif;
+  font-size: 6rem;
+}
+.diary_contents{
+  width:85%;
+  margin: auto;
+  padding-top: 7vw;
+  padding-bottom: 8vw;
+  color:#000;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 8rem;
+  letter-spacing: 0.1rem;
+}
+.diary_box{
+  margin-left: auto;
+  margin-right: auto;
+  width:30vw;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  background-color: #bc6c25;
+  font-weight: bold;
+  color:#eee;
+  padding-top: 1vw;
+  padding-bottom:1vw;
 }
 footer{
   background: #111111;

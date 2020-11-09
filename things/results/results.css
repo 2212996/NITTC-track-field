@@ -320,7 +320,239 @@ body{
 .contents{
   width:100%;
   background-color: #fffcf2;
+  padding-bottom: 10vw;
 }
+.results_title{
+  background-color: #fffcf2;
+}
+.results_title_main{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8vw;
+  width:65%;
+  text-align: center;
+  font-size: 8rem;
+  font-family: 'Fjalla One', sans-serif;
+  color:#252422;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+}
+.results_title_sub{
+  width:100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+  color:#252422;
+}
+
+
+.select_year {
+  overflow: hidden;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10vw;
+}
+.select_year select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 3rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_year option{
+  font-size: 1.5rem;
+  width: 30vw;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_year select::-ms-expand {
+  display: none;
+}
+.select_year.triangle {
+  position: relative;
+  border-radius: 1vw;
+  border: 1vw solid #dda15e;
+  background: #ffffff;
+}
+.select_year.triangle::before {
+  position: absolute;
+  top: 2.5vw;
+  right: 2.5vw;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 1.25vw solid transparent;
+  border-right: 1.25vw solid transparent;
+  border-top: 1.25vw solid #252422;
+  pointer-events: none;
+}
+.select_year.triangle select {
+  padding: 1.25vw 5vw 1.25vw 1.25vw;
+  color: #252422;
+}
+.select_comp {
+  overflow: hidden;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 7vw;
+  margin-bottom: 2.5vw;
+}
+.select_comp select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 3rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_comp option{
+  font-size: 1.5rem;
+  width: 30vw;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_comp select::-ms-expand {
+  display: none;
+}
+.select_comp.triangle {
+  position: relative;
+  border-radius: 1vw;
+  border: 1vw solid #dda15e;
+  background: #ffffff;
+}
+.select_comp.triangle::before {
+  position: absolute;
+  top: 2.5vw;
+  right: 2.5vw;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 1.25vw solid transparent;
+  border-right: 1.25vw solid transparent;
+  border-top: 1.25vw solid #252422;
+  pointer-events: none;
+}
+.select_comp.triangle select {
+  padding: 1.25vw 5vw 1.25vw 1.25vw;
+  color: #252422;
+}
+.results{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vw;
+}
+.chart{
+  padding-bottom: 5vw;
+}
+.chart_title{
+  color:#000;
+  text-align: center;
+  margin-top: 3vw;
+  margin-bottom:3vw;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-size: 5rem;
+  font-weight: bold;
+}
+.chart_table{
+  width:100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-radius: 1.25vw;
+}
+.chart_table table{
+  border-collapse:collapse;
+  table-layout: fixed;
+  width: 120%;
+  font-family: "游ゴシック", "Yu Gothic";
+}
+.chart_table thead{
+  background-color: #403d39;
+  color:#eee;
+  font-size: 3.5rem;
+}
+.chart_table th{
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.chart_table td{
+  text-align: center;
+  font-size: 3.25rem;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border-bottom: 1px solid #222;
+  font-weight: bold;
+}
+.chart_table td a{
+  font-size: 2.5rem;
+  padding-left: 1.5vw;
+}
+.rank{
+  width:20%;
+}
+.name{
+  width:37.5%;
+}
+.score{
+  width:42.5%;
+}
+.party{
+  width:20%;
+}
+.chart_table::-webkit-scrollbar{
+  width: 10vw;
+}
+.chart_table::-webkit-scrollbar-track{
+  background: #fffcf2;
+  border: none;
+  border-radius: 10px;
+}
+.chart_table::-webkit-scrollbar-thumb{
+  background: #ccc5b9;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
   background: #111111;
 }
