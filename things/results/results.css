@@ -471,15 +471,40 @@ body{
 .chart{
   padding-bottom: 5vw;
 }
+.chart_info{
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+}
 .chart_title{
   color:#000;
   text-align: center;
-  margin-top: 3vw;
-  margin-bottom:3vw;
   font-family: "游ゴシック", "Yu Gothic";
-  font-size: 5rem;
+  font-size: 5.5rem;
+  font-weight: bold;
+  width:100%;
+}
+.chart_place{
+  color:#000;
+  text-align: center;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-size: 3rem;
+  margin-top: -1vw;
+}
+.chart_date{
+  color:#000;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 4.5rem;
   font-weight: bold;
 }
+
+
+
+
+
+
 .chart_table{
   width:100%;
   overflow-x: scroll;
@@ -489,7 +514,7 @@ body{
 .chart_table table{
   border-collapse:collapse;
   table-layout: fixed;
-  width: 120%;
+  width: 165%;
   font-family: "游ゴシック", "Yu Gothic";
 }
 .chart_table thead{
@@ -513,17 +538,23 @@ body{
   font-size: 2.5rem;
   padding-left: 1.5vw;
 }
-.rank{
+.cate{
   width:20%;
 }
 .name{
-  width:37.5%;
+  width:40%;
 }
 .score{
-  width:42.5%;
+  width:40%;
 }
-.party{
+.race{
   width:20%;
+}
+.rank{
+  width:20%;
+}
+.other{
+  width:25%;
 }
 .chart_table::-webkit-scrollbar{
   width: 10vw;
@@ -538,7 +569,9 @@ body{
   border-radius: 10px;
   box-shadow: none;
 }
-
+.woman{
+  border-left: 2vw solid #d62828;
+}
 
 
 
