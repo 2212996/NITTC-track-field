@@ -298,7 +298,7 @@ body{
 }
 .top{
   width:100%;
-  background: url(../assets/Gallery.png);
+  background: url(../../../assets/Results.png);
   background-position: center;
   background-size: cover;
   height: 20vh;
@@ -322,113 +322,265 @@ body{
   background-color: #fffcf2;
   padding-bottom: 10vw;
 }
-.select{
+.results_title{
+  background-color: #fffcf2;
+}
+.results_title_main{
   margin-left: auto;
   margin-right: auto;
-  width:75%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5vw;
-  padding-bottom:3vw;
+  padding-top: 8vw;
+  width:65%;
+  text-align: center;
+  font-size: 8rem;
   font-family: 'Fjalla One', sans-serif;
+  color:#252422;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
 }
-.select_left{
-  background-color: #ccc5b9;
-  width:20vw;
+.results_title_sub{
+  width:100%;
   text-align: center;
-  font-size: 3.5rem;
-  margin-top: 2vw;
-  margin-bottom:2vw;
-  padding-top: 1vw;
-  padding-bottom:1vw;
-  letter-spacing: 0.125vw;
-  color:#777;
-  border-radius: 0.5vw;
+  font-size: 1.25rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+  color:#252422;
 }
-.select_left a{
-  text-decoration: none;
-  color:#777;
-}
-.select_center{
-  background-color: #bc6c25;
-  width:22vw;
+
+
+.select_year {
+  overflow: hidden;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color:#fff;
-  font-size: 3.5rem;
-  padding-top: 3vw;
-  padding-bottom:3vw;
-  border-radius: 100% 4vw / 4vw 100%;
-  letter-spacing: 0.25vw;
+  margin-top: 10vw;
 }
-.select_right{
-  background-color: #ccc5b9;
-  width:20vw;
+.select_year select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 3rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_year option{
+  font-size: 1.5rem;
+  width: 30vw;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_year select::-ms-expand {
+  display: none;
+}
+.select_year.triangle {
+  position: relative;
+  border-radius: 1vw;
+  border: 1vw solid #dda15e;
+  background: #ffffff;
+}
+.select_year.triangle::before {
+  position: absolute;
+  top: 2.5vw;
+  right: 2.5vw;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 1.25vw solid transparent;
+  border-right: 1.25vw solid transparent;
+  border-top: 1.25vw solid #252422;
+  pointer-events: none;
+}
+.select_year.triangle select {
+  padding: 1.25vw 5vw 1.25vw 1.25vw;
+  color: #252422;
+}
+.select_comp {
+  overflow: hidden;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-size: 3.5rem;
-  margin-top: 2vw;
-  margin-bottom:2vw;
-  padding-top: 1vw;
-  padding-bottom:1vw;
-  letter-spacing: 0.125vw;
-  color:#777;
-  border-radius: 0.5vw;
+  margin-top: 7vw;
+  margin-bottom: 2.5vw;
 }
-.video{
+.select_comp select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 3rem;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_comp option{
+  font-size: 1.5rem;
+  width: 100%;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-weight: bold;
+}
+.select_comp select::-ms-expand {
+  display: none;
+}
+.select_comp.triangle {
+  position: relative;
+  border-radius: 1vw;
+  border: 1vw solid #dda15e;
+  background: #ffffff;
+}
+.select_comp.triangle::before {
+  position: absolute;
+  top: 2.5vw;
+  right: 2.5vw;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 1.25vw solid transparent;
+  border-right: 1.25vw solid transparent;
+  border-top: 1.25vw solid #252422;
+  pointer-events: none;
+}
+.select_comp.triangle select {
+  padding: 1.25vw 5vw 1.25vw 1.25vw;
+  color: #252422;
+}
+.results{
   width:90%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2vw;
-  padding-bottom:5vw;
+  margin-top: 10vw;
 }
-.video_table{
-  width:100%;
-  background-color:#403d39; 
-  border-radius: 1vw;
-  box-shadow: 1vw 1vw 2vw 0 rgba(0, 0, 0, .5);
+.chart{
+  padding-bottom: 5vw;
+  padding-top: 5vw;
 }
-.video_table a{
-  text-decoration: none;
-  color:#fff;
-}
-.video_year{
-  color:#000;
-  width:25vw;
-  text-align: left;
-  padding-top: 3vw;
-  padding-bottom:3vw;
-}
-.video_year_posi{
-  width:100%;
-  font-family: "游ゴシック", "Yu Gothic";
-  font-size: 4rem;
-  font-weight: bold;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-  padding-left: 3vw;
-  border-radius: 1vw;
-  border-left: 2vw solid #403d39;
-}
-.video_table table{
-  width:95%;
+.chart_info{
+  width:60%;
   margin-left: auto;
   margin-right: auto;
-  color:#fff;
-  font-size: 3.5rem;
+  margin-bottom: 3vw;
+}
+.chart_title{
+  color:#000;
+  text-align: center;
   font-family: "游ゴシック", "Yu Gothic";
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+  font-size: 5.5rem;
+  font-weight: bold;
+  width:100%;
 }
-.video_table td{
-  padding-top: 2vw;
-  padding-bottom:2vw;
-  border-top: 0.25vw dashed #bbb;
+.chart_place{
+  color:#000;
+  text-align: center;
+  font-family: "游ゴシック", "Yu Gothic";
+  font-size: 3rem;
+  margin-top: -1vw;
 }
-.date{
+.chart_date{
+  color:#000;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 4.5rem;
   font-weight: bold;
 }
-.last{
-  border-bottom: 0.25vw dashed #bbb;
+.chart_table{
+  width:100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-radius: 1.25vw;
 }
+.chart_table table{
+  border-collapse:collapse;
+  table-layout: fixed;
+  width: 165%;
+  font-family: "游ゴシック", "Yu Gothic";
+}
+.chart_table thead{
+  background-color: #403d39;
+  color:#eee;
+  font-size: 3.5rem;
+}
+.chart_table th{
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.chart_table td{
+  text-align: center;
+  font-size: 3.25rem;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border-bottom: 1px solid #222;
+  font-weight: bold;
+}
+.chart_table td a{
+  font-size: 2.5rem;
+  padding-left: 1.5vw;
+}
+.cate{
+  width:20%;
+}
+.name{
+  width:40%;
+}
+.score{
+  width:40%;
+}
+.race{
+  width:20%;
+}
+.rank{
+  width:20%;
+}
+.other{
+  width:25%;
+}
+.chart_table::-webkit-scrollbar{
+  width: 10vw;
+}
+.chart_table::-webkit-scrollbar-track{
+  background: #fffcf2;
+  border: none;
+  border-radius: 10px;
+}
+.chart_table::-webkit-scrollbar-thumb{
+  background: #ccc5b9;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.woman{
+  border-left: 2vw solid #d62828;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
   background: #111111;
 }
@@ -488,7 +640,7 @@ footer{
   background:#000000;
   color:#ffffff;
   font-family: "M PLUS Rounded 1c";
-  font-size: 2.5rem;
+  font-size: 0.5rem;
   padding-top: 3vw;
   padding-bottom: 3vw;
   text-align: center;

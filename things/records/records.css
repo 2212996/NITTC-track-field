@@ -314,12 +314,12 @@ body{
   width: 100%;
   font-size: 9rem;
   top:28vw;
-  
   font-family: 'Fjalla One', sans-serif;
 }
 .contents{
   width:100%;
   background-color: #fffcf2;
+  padding-bottom: 5vw;
 }
 .records_title{
   background-color: #fffcf2;
@@ -380,6 +380,10 @@ body{
   padding-left: 3vw;
   padding-right: 3vw;
 }
+.esc_gender_woman a{
+  text-decoration: none;
+  color:#111;
+}
 .esc_major{
   display: flex;
   justify-content: space-between;
@@ -398,6 +402,11 @@ body{
   width:15vw;
   border:1vw solid #bc6c25;
   border-radius: 1vw;
+}
+.esc_major_short a, .esc_major_long a, .esc_major_jump a, .esc_major_throw a
+{
+  text-decoration: none;
+  color:#eee;
 }
 .records{
   width:90%;
@@ -487,10 +496,6 @@ body{
   border-radius: 10px;
   box-shadow: none;
 }
-
-
-
-
 footer{
   background: #111111;
 }
@@ -550,7 +555,7 @@ footer{
   background:#000000;
   color:#ffffff;
   font-family: "M PLUS Rounded 1c";
-  font-size: 2.5rem;
+  font-size: 1rem;
   padding-top: 3vw;
   padding-bottom: 3vw;
   text-align: center;

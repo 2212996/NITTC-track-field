@@ -360,6 +360,10 @@ body{
   padding-bottom:1vw;
   margin-bottom: 5vw;
 }
+.diary_box a{
+  text-decoration: none;
+  color:#eee;
+}
 .prediary_box{
   display: block;
   margin-left: auto;
@@ -373,6 +377,10 @@ body{
   padding-top: 1vw;
   padding-bottom: 1vw;
   font-family: "游ゴシック", "Yu Gothic";
+}
+.prediary_box a{
+  text-decoration: none;
+  color:#fff;
 }
 footer{
   background: #111111;
@@ -433,7 +441,7 @@ footer{
   background:#000000;
   color:#ffffff;
   font-family: "M PLUS Rounded 1c";
-  font-size: 2.5rem;
+  font-size: 1.1rem;
   padding-top: 3vw;
   padding-bottom: 3vw;
   text-align: center;
