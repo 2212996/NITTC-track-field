@@ -475,8 +475,14 @@ body{
 .name{
   width:37.5%;
 }
+.name2{
+  width:50%;
+}
 .score{
   width:47.5%;
+}
+.score2{
+  width:35%;
 }
 .party{
   width:45%;
