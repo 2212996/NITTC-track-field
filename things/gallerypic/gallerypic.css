@@ -423,8 +423,9 @@ body{
   padding-bottom:2vw;
   border-top: 0.25vw dashed #bbb;
 }
-.date{
+.name{
   font-weight: bold;
+  padding-left: 2vw;
 }
 .last{
   border-bottom: 0.25vw dashed #bbb;
