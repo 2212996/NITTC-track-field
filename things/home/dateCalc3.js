@@ -1,4 +1,4 @@
-var d1 = new Date('2020/11/28 00:00:00');
+var d1 = new Date('2020/12/25 00:00:00');
 var d2 = new Date();
 
 var diffTime = d1.getTime() - d2.getTime();

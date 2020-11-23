@@ -1,554 +1,576 @@
-html{
-  font-size: 62.5%;
-  background: #000;
-}
-body{
-  margin:0;
-  padding:0;
-  font-size: 2.5em;
-}
-.header{
-  width:100%;
-  height:15vw;
-  background-color: #fffcf2;
-}
-.header_logo{
-  display: block;
-  color:#252422;
-  font-family: 'Abel', sans-serif;
-  font-size: 6rem;
-  line-height: 4.15vw;
-  font-weight: bold;
-  margin-left: 3vw;
-  padding-top: 2.3vw;
-}
-/*左上ロゴの2行目横幅合わせ*/
-.header_logo a{
-  letter-spacing: 0.4vw;
-}
-/*左上ロゴの3行目横幅合わせ*/
-.header_logo_sub{
-  font-size: 3.21rem;
-  margin-top: -1vw;
-}
-/*左上ロゴの”E”の装飾*/
-.header_logo a1{
-  color:#eb5e28;
-}
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.sidemenu_title{
-  position: absolute;
-  top:40vw;
-  font-family: "Kokoro";
-  font-size: 6rem;
-}
-.sidemenu_title a2{
-  color:#eb5e28;
-  font-weight: bold;
-}
-.sidemenu_twitter{
-  position:absolute;
-  bottom:32.5vw;
-}
-/*ハンバーガーメニューのtwitterアイコンの大きさ指定*/
-.icn_twi{
-  width:12.5vw;
-}
-/*ハンバーガーメニューのa要素*/
-.sidemenu a,
-.sidemenu a:visited,
-.sidemenu a:hover,
-.sidemenu a:active {
-  text-decoration: none;
-  color: inherit;
-}
-.sidemenu {
-  position: fixed;
-  z-index: 1000;
-  top: 0vw;
-  right:0vw;
-}
-.sidemenu .sidemenu_list {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  visibility: hidden;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  outline: 1px solid transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  align-items: center;
-  justify-content: center;
-}
-.sidemenu .sidemenu_list > div {
-  display: flex;
-  overflow: hidden;
-  width: 200vw;
-  height: 200vw;
-  transition: all 0.4s ease;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  text-align: center;
-  color: #fefefe;
-  border-radius: 50%;
-  background: rgba(0,0,0 ,0.8);
-  flex: none;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  align-items: center;
-  justify-content: center;
-}
-.sidemenu .sidemenu_list > div > ul {
-  display: block;
-  max-height: 100vw;
-  margin: 0;
-  padding: 0 1vw;
-  list-style: none;
-  transition: opacity 0.4s ease;
-  opacity: 0;
-  width: 45%;
-}
-.sidemenu .sidemenu_list > div > ul > li {
-  font-size: 6rem;
-  display: block;
-  margin-top: 2vw;
-  padding-bottom: 2vw;
-  width: 100%;
-  border-bottom: solid 2px #eee;
-  text-align: left;
-  font-family: 'Abel', sans-serif;
-  border-left: solid 1vw #eee;
-}
-.sidemenu a1{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 3rem;
-  padding-left: 7vw;
-}
-.sidemenu .sidemenu_list > div > ul > li > a {
-  display: inline;
-  cursor: pointer;
-  transition: color 0.4s ease;
-  margin-left: 3vw;
-  padding-right: 45vw;
-  position: relative;
-  top: 0;
-  left: 0;
-  height:100%;
-  z-index: 100;
-}
-.sidemenu .sidemenu_list > div > ul > li > a:hover {
-  color: #e5e5e5;
-}
-.sidemenu .sidemenu_list > div > ul > li > a:hover:after {
-  width: 100%;
-}
-.sidemenu .sidemenu_list > div > ul > li > a:after {
-  position: absolute;
-  z-index: 1;
-  bottom: -0.15em;
-  right: 0;
-  width: 0;
-  height: 2px;
-  content: '';
-  transition: width 0.4s ease;
-  background: #e5e5e5;
-}
-.sidemenu .sidemenu_toggle {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  opacity: 0;
-}
-.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span {
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:before,
-.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:after {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:after {
-  opacity: 0;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list {
-  visibility: visible;
-  pointer-events: auto;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div {
-  transition-duration: 0.75s;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul {
-  opacity: 1;
-}
-/*ハンバーガーメニューを開いた時のフェードイン効果の記述*/
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > .sidemenu_title {
-  transition-delay: 0.1s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(1) {
-  transition-delay: 0.2s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(2) {
-  transition-delay: 0.3s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(3) {
-  transition-delay: 0.4s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(4) {
-  transition-delay: 0.5s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(5) {
-  transition-delay: 0.6s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(6) {
-  transition-delay: 0.7s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(7) {
-  transition-delay: 0.8s;
-}
-.sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > .sidemenu_twitter {
-  transition-delay: 0.9s;
-}
-.sidemenu .sidemenu_toggle:hover + .sidemenu_hamb {
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.sidemenu .sidemenu_toggle:checked:hover + .sidemenu_hamb > span {
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-/*ハンバーガーメニューの装飾*/
-.sidemenu .sidemenu_hamb {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 15vw;
-  height: 15vw;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  transition: box-shadow 0.4s ease;
-  background: #283618;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.sidemenu .sidemenu_hamb > span {
-  position: relative;
-  top: 47.5%;
-  margin:auto;/*線の中心揃え*/
-  display: block;
-  width: 65%;
-  height: 0.5vw;
-  transition: all 0.4s ease;
-  background: #fff;
-}
-.sidemenu .sidemenu_hamb > span:before,
-.sidemenu .sidemenu_hamb > span:after {
-  position: absolute;
-  z-index: 1;
-  top: -2vw;
-  right: 0;
-  display: block;
-  width: 100%;
-  height: 0.5vw;
-  content: '';
-  transition: all 0.4s ease;
-  background: inherit;
-}
-.sidemenu .sidemenu_hamb > span:after {
-  top: 2vw;
-}
-/*上部ツイッターアイコンの記述*/
-.twitter{
-  height:15vw;
-  width:15vw;
-  background-color: #606c38;
-  top:0vw;
-  position: absolute;
-  right: 15vw;
-}
-/*上部ツイッターアイコン画像置き場の場所合わせ*/
-.twitter_posi{
-  width:7vw;
-  height:7vw;
-  margin:auto;
-  margin-top: 4vw;
-}
-/*上部ツイッターアイコンのアイコンの制御*/
-.twi_icn_twi{
-  width: 100%;
-}
-/*タイトル部分*/
-.title{
-  height:20vh;
-}
-.top{
-  width:100%;
-  background: url(../assets/Member.png);
-  background-position: center;
-  background-size: cover;
-  height: 20vh;
-  top: 0;
-  left: 0;
-  text-align: center;
-  opacity: 0.5;
-}
-.top_sentence{
-  position:absolute;
-  color:#eee;
-  text-align: center;
-  width: 100%;
-  font-size: 9rem;
-  top:28vw;
+@media screen and (max-width: 479px){
+  /**/
+  /**/
+  /**/
+  /****Mobile共通部分終了****/
+  html{
+    font-size: 62.5%;
+    background: #000;
+  }
+  body{
+    margin:0;
+    padding:0;
+    font-size: 2.5em;
+    -webkit-text-size-adjust: 100%;
+  }
+  .header{
+    width:100%;
+    height:15vw;
+    background-color: #fffcf2;
+  }
+  .header_logo{
+    display: block;
+    color:#252422;
+    font-family: 'Abel', sans-serif;
+    font-size: 2.5rem;
+    line-height: 4.25vw;
+    font-weight: bold;
+    margin-left: 3vw;
+    padding-top: 2.2vw;
+  }
+  /*左上ロゴの2行目横幅合わせ*/
+  .header_logo a{
+    letter-spacing: 0.35vw;
+  }
+  /*左上ロゴの3行目横幅合わせ*/
+  .header_logo_sub{
+    font-size: 1.36rem;
+    margin-top: -0.5vw;
+  }
+  /*左上ロゴの”E”の装飾*/
+  .header_logo a1{
+    color:#eb5e28;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .sidemenu_title a2{
+    color:#eb5e28;
+    font-weight: bold;
+  }
+  /*ハンバーガーメニューのtwitterアイコンの大きさ指定*/
+  .icn_twi{
+    width:12.5vw;
+  }
+  /*ハンバーガーメニューのa要素*/
+  .sidemenu a,
+  .sidemenu a:visited,
+  .sidemenu a:hover,
+  .sidemenu a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+  .sidemenu {
+    position: fixed;
+    z-index: 1000;
+    top: 0vw;
+    right:0vw;
+  }
+  .sidemenu .sidemenu_list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidemenu .sidemenu_list > div {
+    display: flex;
+    overflow: hidden;
+    width: 120vh;
+    height: 120vh;
+    transition: all 0.4s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    text-align: center;
+    color: #fefefe;
+    border-radius: 50%;
+    background: rgba(0,0,0 ,0.8);
+    flex: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidemenu .sidemenu_list > div > ul {
+    display: block;
+    margin: 0;
+    padding: 0 1vw;
+    list-style: none;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    width: 85vw;
+  }
+  .sidemenu .sidemenu_list > div > ul > li {
+    font-size: 2.75rem;
+    display: block;
+    margin-top: 2vw;
+    padding-bottom: 2vw;
+    width: 85vw;
+  }
+  .sidemenu_title{
+    font-family: "Kokoro";
+    font-size: 2.5rem;
+  }
+  .list{
+    text-align: left;
+    border-left: solid 1vw #eee;
+    border-bottom: solid 2px #eee;
+    font-family: 'Abel', sans-serif;
+  }
+  .list_twitter{
+    padding-top: 5vw;
+    height:auto;
+  }
+  .sidemenu a1{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.75rem;
+    padding-left: 7vw;
+  }
+  .sidemenu .sidemenu_list > div > ul > li > a {
+    display: inline;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    margin-left: 3vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    height:100%;
+    z-index: 100;
+  }
+  .sidemenu .sidemenu_list > div > ul > li > a:hover {
+    color: #e5e5e5;
+  }
+  .sidemenu .sidemenu_list > div > ul > li > a:hover:after {
+    width: 100%;
+  }
+  .sidemenu .sidemenu_list > div > ul > li > a:after {
+    position: absolute;
+    z-index: 1;
+    bottom: -0.15em;
+    right: 0;
+    width: 0;
+    height: 2px;
+    content: '';
+    transition: width 0.4s ease;
+    background: #e5e5e5;
+  }
+  .sidemenu .sidemenu_toggle {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  .sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:before,
+  .sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .sidemenu .sidemenu_toggle:checked + .sidemenu_hamb > span:after {
+    opacity: 0;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list {
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div {
+    transition-duration: 0.75s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul {
+    opacity: 1;
+  }
+  /*ハンバーガーメニューを開いた時のフェードイン効果の記述*/
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(1) {
+    transition-delay: 0.1s;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(2) {
+    transition-delay: 0.2s;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(3) {
+    transition-delay: 0.3s;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(4) {
+    transition-delay: 0.4s;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(5) {
+    transition-delay: 0.5s;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(6) {
+    transition-delay: 0.6s;
+  }
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(7) {
+    transition-delay: 0.7s;
+  }  
+  .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(8) {
+    transition-delay: 0.8s;
+  }
+    .sidemenu .sidemenu_toggle:checked ~ .sidemenu_list > div > ul li:nth-of-type(9) {
+    transition-delay: 0.9s;
+  }
+  .sidemenu .sidemenu_toggle:hover + .sidemenu_hamb {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .sidemenu .sidemenu_toggle:checked:hover + .sidemenu_hamb > span {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+  /*ハンバーガーメニューの装飾*/
+  .sidemenu .sidemenu_hamb {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 15vw;
+    height: 15vw;
+    padding: 0.5em 0.7em;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease;
+    background: #283618;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .sidemenu .sidemenu_hamb > span {
+    position: relative;
+    top: 47.5%;
+    margin:auto;/*線の中心揃え*/
+    display: block;
+    width: 90%;
+    height: 0.5vw;
+    transition: all 0.4s ease;
+    background: #fff;
+  }
+  .sidemenu .sidemenu_hamb > span:before,
+  .sidemenu .sidemenu_hamb > span:after {
+    position: absolute;
+    z-index: 1;
+    top: -2vw;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 0.5vw;
+    content: '';
+    transition: all 0.4s ease;
+    background: inherit;
+  }
+  .sidemenu .sidemenu_hamb > span:after {
+    top: 2vw;
+  }
+  /*上部ツイッターアイコンの記述*/
+  .twitter{
+    height:15vw;
+    width:15vw;
+    background-color: #606c38;
+    top:0vw;
+    position: absolute;
+    right: 15vw;
+  }
+  /*上部ツイッターアイコン画像置き場の場所合わせ*/
+  .twitter_posi{
+    width:7vw;
+    height:7vw;
+    margin:auto;
+    margin-top: 4vw;
+  }
+  /*上部ツイッターアイコンのアイコンの制御*/
+  .twi_icn_twi{
+    width: 100%;
+  }
+  /****Mobile共通部分終了****/
+  /**/
+  /**/
+  /**/
   
-  font-family: 'Fjalla One', sans-serif;
-}
-.contents{
-  width:100%;
-  background-color: #fffcf2;
-}
-.member{
-  display:flex;
-  padding-bottom: 3vw;
-}
-.subject{
-  width:95%;
-  text-align: center;
-  padding-top: 5vw;
-  padding-bottom:5vw;
-  margin-left: auto;
-  margin-right: auto;
-}
-.subject_txt{
-  width: 100%;
-  padding-left: 2vw;
-  font-size: 5rem;
-  font-family: "游ゴシック", "Yu Gothic";
-  color:#252422;
-  font-weight: bold;
-}
-.member_table{
-  width:95%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.member_table table{
-  text-align: center;
-  width:100%;
-  font-family: "游ゴシック", "Yu Gothic";
-  border-collapse: collapse;
-  background-color: #fffcf2;
-}
-.member_table td{
-  font-size: 3.25rem;
-  padding-top: 1.15vw;
-  padding-bottom: 1.15vw;
-  border:0.3vw solid #000;
-}
-.member_table th, .member_table td{
-  font-weight: 600;
-  color:#222;
-}
-/*表下部のスペース作成の為の記述(tableのpadding-bottomの代わり)*/
-.void_space{
-  background-color: #fffcf2;
-  width:100%;
-  height:2.5vw;
-}
-/*機械科のセルの背景指定*/
-.kikai{
-  background-color: #f94144;
-}
-/*電気科のセルの背景指定*/
-.denki{
-  background-color: #f9c74f;
-}
-/*情報科のセルの背景指定*/
-.zyouho{
-  background-color: #577590;
-}
-/*環境科のセルの背景指定*/
-.kankyo{
-  background-color: #90be6d;
-}
-/*建築科のセルの背景指定*/
-.kentiku{
-  background-color: #f8961e;
-}
-/*学年書いてあるところ*/
-.grade_label{
-  width:100%;
-  cursor :pointer;
-  transition: all 0.5s;
-}
-/*学年書いてあるところの左半分*/
-.grade_disp{
-  width:89%;
-  float:left;
-  background-color: #252422;
-  color:#eee;
-  font-family: "游ゴシック", "Yu Gothic";
-  font-size: 4rem;
-  font-weight: bold;
-  padding-left: 4vw;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  margin-bottom: 1vw;
-  border-right: 1vw solid #252422;
-  border-radius:1vw 0 0 1vw;
-}
-/*学年書いてあるところの右半分*/
-.grade_disp_pls{
-  text-align: right;
-  width:11%;
-  float: right;
-  background-color: #252422;
-  color:#eee;
-  font-family: "游ゴシック", "Yu Gothic";
-  font-size: 4rem;
-  font-weight: bold;
-  padding-right: 4vw;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  margin-bottom: 1vw;
-  border-left: 2vw solid #252422;
-  border-radius:0 1vw 1vw 0;
-}
-/*チェックボックスを無効にする記述*/
-.grade_gra input,.grade_5th input,.grade_4th input,.grade_3rd input,.grade_2nd input,.grade_1st input,.grade_teach input{
-  display: none;
-}
-/*以下、アコーディオンボックスの記述*/
-.grade_gra .grade_table {
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.grade_5th .grade_table {
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.grade_4th .grade_table{
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.grade_3rd .grade_table{
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.grade_2nd .grade_table{
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.grade_1st .grade_table{
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.grade_teach .grade_table {
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.8s;
-}
-.cssacc:checked + .grade_table {
-  height: auto;
-  padding: 5px;
-  background: #eaeaea;
-  opacity: 1;
-}
-footer{
-  background: #111111;
-}
-.footer_surface{
-  width:85%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10vw;
-  color:#f3f3f3;
-}
-.footer_title{
-  font-family: 'Acme', sans-serif;
-  font-size: 8vw;
-  border-bottom: 0.5vw solid #CCCCCC;
-}
-.footer_title a{
-  font-family: "M PLUS Rounded 1c";
-  font-size: 3vw;
-  margin-left: 6vw;
-}
-.footer_content{
-  padding-top: 10vw;
-  padding-bottom: 8vw;
-  font-family: "游ゴシック", "Yu Gothic";
-  font-size: 4vw;
   
-  line-height: 6vw;
-  letter-spacing: 0.15vw;
-}
-.footer_content td{
-  padding-right: 5vw;
-}
-.footer_btn{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 0vw;
-  margin-bottom: 8vw;
-  padding-top: 1vw;
-  padding-bottom:1vw;
-  font-size: 4.5vw;
-  color:#000;
-  background: #f3f3f3;
-  width:60%;
-  font-family: "M PLUS Rounded 1c";
-  position: relative;
-}
-.footer_btn a{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height:100%;
-  width: 100%;
-  z-index: 1000;
-}
-.footer_bottom{
-  background:#000000;
-  color:#ffffff;
-  font-family: "M PLUS Rounded 1c";
-  font-size: 2.5rem;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
-  text-align: center;
+  /*タイトル部分*/
+  .title{
+    height:20vh;
+  }
+  .top{
+    width:100%;
+    background: url(../assets/Member.png);
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .top_sentence{
+    position:absolute;
+    color:#eee;
+    text-align: center;
+    width: 100%;
+    height:20vh;
+    font-size: 3.5rem;
+    top:15vw;
+
+    font-family: 'Fjalla One', sans-serif;
+  }
+  .top_sentence p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;  
+  }
+  .contents{
+    width:100%;
+    background-color: #fffcf2;
+  }
+  .member{
+    display:flex;
+    padding-bottom: 3vw;
+  }
+  .subject{
+    width:95%;
+    text-align: center;
+    padding-top: 5vw;
+    padding-bottom:5vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .subject_txt{
+    width: 100%;
+    padding-left: 2vw;
+    font-size: 2.5rem;
+    font-family: "游ゴシック", "Yu Gothic";
+    color:#252422;
+    font-weight: bold;
+  }
+  .member_table{
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .member_table table{
+    text-align: center;
+    width:100%;
+    font-family: "游ゴシック", "Yu Gothic";
+    border-collapse: collapse;
+    background-color: #fffcf2;
+  }
+  .member_table td{
+    font-size: 1.5rem;
+    padding-top: 1.15vw;
+    padding-bottom: 1.15vw;
+    border:0.3vw solid #000;
+  }
+  .member_table th, .member_table td{
+    font-weight: 600;
+    color:#222;
+  }
+  /*表下部のスペース作成の為の記述(tableのpadding-bottomの代わり)*/
+  .void_space{
+    background-color: #fffcf2;
+    width:100%;
+    height:2.5vw;
+  }
+  /*機械科のセルの背景指定*/
+  .kikai{
+    background-color: #f94144;
+  }
+  /*電気科のセルの背景指定*/
+  .denki{
+    background-color: #f9c74f;
+  }
+  /*情報科のセルの背景指定*/
+  .zyouho{
+    background-color: #577590;
+  }
+  /*環境科のセルの背景指定*/
+  .kankyo{
+    background-color: #90be6d;
+  }
+  /*建築科のセルの背景指定*/
+  .kentiku{
+    background-color: #f8961e;
+  }
+  /*学年書いてあるところ*/
+  .grade_label{
+    width:100%;
+    cursor :pointer;
+    transition: all 0.5s;
+  }
+  /*学年書いてあるところの左半分*/
+  .grade_disp{
+    width:89%;
+    float:left;
+    background-color: #252422;
+    color:#eee;
+    font-family: "游ゴシック", "Yu Gothic";
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-bottom: 1vw;
+    border-right: 1vw solid #252422;
+    border-radius:1vw 0 0 1vw;
+  }
+  /*学年書いてあるところの右半分*/
+  .grade_disp_pls{
+    text-align: right;
+    width:11%;
+    float: right;
+    background-color: #252422;
+    color:#eee;
+    font-family: "游ゴシック", "Yu Gothic";
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-right: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-bottom: 1vw;
+    border-left: 2vw solid #252422;
+    border-radius:0 1vw 1vw 0;
+  }
+  /*チェックボックスを無効にする記述*/
+  .grade_gra input,.grade_5th input,.grade_4th input,.grade_3rd input,.grade_2nd input,.grade_1st input,.grade_teach input{
+    display: none;
+  }
+  /*以下、アコーディオンボックスの記述*/
+  .grade_gra .grade_table {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .grade_5th .grade_table {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .grade_4th .grade_table{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .grade_3rd .grade_table{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .grade_2nd .grade_table{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .grade_1st .grade_table{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .grade_teach .grade_table {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .cssacc:checked + .grade_table {
+    height: auto;
+    padding: 5px;
+    background: #eaeaea;
+    opacity: 1;
+  }
+  footer{
+    background: #111111;
+  }
+  .footer_surface{
+    width:85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10vw;
+    color:#f3f3f3;
+  }
+  .footer_title{
+    font-family: 'Acme', sans-serif;
+    font-size: 8vw;
+    border-bottom: 0.5vw solid #CCCCCC;
+  }
+  .footer_title a{
+    font-family: "M PLUS Rounded 1c";
+    font-size: 3vw;
+    margin-left: 6vw;
+  }
+  .footer_content{
+    padding-top: 10vw;
+    padding-bottom: 8vw;
+    font-family: "游ゴシック", "Yu Gothic";
+    font-size: 4vw;
+
+    line-height: 6vw;
+    letter-spacing: 0.15vw;
+  }
+  .footer_content td{
+    padding-right: 5vw;
+  }
+  .footer_btn{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 0vw;
+    margin-bottom: 8vw;
+    padding-top: 1vw;
+    padding-bottom:1vw;
+    font-size: 4.5vw;
+    color:#000;
+    background: #f3f3f3;
+    width:60%;
+    font-family: "M PLUS Rounded 1c";
+    position: relative;
+  }
+  .footer_btn a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    z-index: 1000;
+  }
+  .footer_bottom{
+    background:#000000;
+    color:#ffffff;
+    font-family: "M PLUS Rounded 1c";
+    font-size: 1rem;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    text-align: center;
+  }
 }

@@ -6,6 +6,7 @@
   <head>
     
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>豊田高専陸上競技部</title>
     
     <!--  ライブラリ  -->
@@ -44,29 +45,32 @@
         </div>
       </div>
       
-      <div class="sidemenu"><!--ハンバーガーボックス-->
-        <input class="sidemenu_toggle" type="checkbox" />
-        <div class="sidemenu_hamb"><span></span></div>
-        <div class="sidemenu_list">
-          <div>
-            <div class="sidemenu_title">とよたこうせん</div>
-            <ul>
-              <li><a href="../home/home.html">TOP<a1>トップページ</a1></a></li>
-              <li><a href="../member/member.html">Member<a1>部員名簿</a1></a></li>
-              <li><a href="../results/results.html">Results<a1>大会結果</a1></a></li>
-              <li><a href="../records/records.html">Records<a1>歴代記録</a1></a></li>
-              <li><a href="../blog/blog.html">Blog<a1>部員ブログ</a1></a></li>
-              <li><a href="../gallery/gallery.html">Gallery<a1>ギャラリー</a1></a></li>
-              <li><a href="../diary/diary.html">Diary<a1>OB・AC日記</a1></a></li>
-            </ul>
-            <div class="sidemenu_twitter">
-              <a href="https://twitter.com/tnct_tfc">
-                <img src="../assets/twitter_logo.jpg" class="icn_twi">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="sidemenu">
+          <input class="sidemenu_toggle" type="checkbox" />
+          <div class="sidemenu_hamb"><span></span></div>
+          <div class="sidemenu_list">
+            <div>
+              <ul>
+                <li></li>
+                <li class="sidemenu_title">
+                  とよたこう<a2>せ</a2>ん
+                </li>
+                <li class="list"><a href="../home/home.html">TOP<a1>トップページ</a1></a></li>
+                <li class="list"><a href="../member/member.html">Member<a1>部員名簿</a1></a></li>
+                <li class="list"><a href="../results/results.html">Results<a1>大会結果</a1></a></li>
+                <li class="list"><a href="../records/records.html">Records<a1>歴代記録</a1></a></li>
+                <li class="list"><a href="../blog/blog.html">Blog<a1>部員ブログ</a1></a></li>
+                <li class="list"><a href="../gallery/gallery.html">Gallery<a1>ギャラリー</a1></a></li>
+                <li class="list"><a href="../diary/diary.html">Diary<a1>OB・AC日記</a1></a></li>
+                <li class="list_twitter">
+                  <a href="https://twitter.com/tnct_tfc">
+                    <img src="../assets/twitter_logo.jpg" class="icn_twi">
+                  </a>
+                </li>
+              </ul>
+            </div><!--end div-->
+          </div><!--end sidemenu_list-->
+        </div><!--end sidemenu-->
         
       <div class="contents"><!--以下コンテンツ要素-->
         
@@ -113,7 +117,7 @@
                       <div id="daychart1"></div>
                     </span>
                     <script>
-                      var d1 = new Date('2021/05/22 00:00:00');
+                      var d1 = new Date('2021/05/22 00:00:00');//日付は適当
                       var d2 = new Date();
 
                       var diffTime = d1.getTime() - d2.getTime();
@@ -137,7 +141,7 @@
                       <div id="daychart2"></div>
                     </span>
                     <script>
-                      var d1 = new Date('2021/07/22 00:00:00');
+                      var d1 = new Date('2021/07/22 00:00:00');//日付は適当
                       var d2 = new Date();
 
                       var diffTime = d1.getTime() - d2.getTime();
@@ -161,7 +165,7 @@
                       <div id="daychart3"></div>
                     </span>
                     <script>
-                      var d1 = new Date('2020/12/22 00:00:00');
+                      var d1 = new Date('2020/12/25 00:00:00');//日付は適当
                       var d2 = new Date();
 
                       var diffTime = d1.getTime() - d2.getTime();
@@ -186,24 +190,24 @@
           <div class="news_subtitle">NEWS</div>
           <div class="news_contents"><!--tableだとフォントサイズが狂うため、divで作成-->
             <div class="news_tr">
-              <div class="news_td news_date">2019/08/18<a2>MEDIA</a2></div>
-              <div class="news_td news_table">東海高専大会の結果を更新</div>
+              <div class="news_td news_date">2020/11/20<a2>MEDIA</a2></div>
+              <div class="news_td news_table">スマホ版HPを更新<br>PC版はもう暫くお待ちください。</div>
             </div>
             <div class="news_tr">
-              <div class="news_td news_date">2019/07/08<a1>RESULT</a1></div>
-              <div class="news_td news_table">愛知県選手権の結果を更新</div>
+              <div class="news_td news_date">2020/09/06<a1>RESULT</a1></div>
+              <div class="news_td news_table">西三河新人戦の結果を更新</div>
             </div>
             <div class="news_tr">
-              <div class="news_td news_date">2019/07/01<a1>RESULT</a1></div>
-              <div class="news_td news_table">たくさん更新しました！</div>
+              <div class="news_td news_date">2020/09/05<a2>MEDIA</a2></div>
+              <div class="news_td news_table">部員名簿を更新</div>
             </div>
             <div class="news_tr">
-              <div class="news_td news_date">2019/06/29<a2>MEDIA</a2></div>
-              <div class="news_td news_table">スマホ版HPを更新しました</div>
+              <div class="news_td news_date">2020/04/03</div>
+              <div class="news_td news_table">新年度になりました！<br>新入生の皆さんどうぞよろしくお願いします！</div>
             </div>
             <div class="news_tr news_tr_bottom">
-              <div class="news_td news_date">2019/06/23<a2>MEDIA</a2></div>
-              <div class="news_td news_table">全国高専大会の結果・動画を更新</div>
+              <div class="news_td news_date">2020/01/01</div>
+              <div class="news_td news_table">あけましておめでとうございます！<br>2020年もよろしくお願いします！</div>
             </div>
           </div>
           <div class="news_button">
@@ -255,7 +259,7 @@
           <div class="twitter_subtitle">TWITTER</div>
           <div class="twitter_body">
             <!--以下のクラス名は埋め込み要素の為、例外としてハイフンによるスネイク記法-->
-            <a class="twitter-timeline" data-lang="ja" data-width="800" data-height="1200" href="https://twitter.com/tnct_tfc?ref_src=twsrc%5Etfw" data-chrome=”noscrollbar”>Tweets by tnct_tfc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-lang="ja" data-width="300" data-height="500" href="https://twitter.com/tnct_tfc?ref_src=twsrc%5Etfw" data-chrome=”noscrollbar”>Tweets by tnct_tfc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
         </div>
 
